@@ -86,5 +86,6 @@ int ft_printf(const char *format, ...)
 	if (!(ft_solver(&p.read, &p.output)))
 		return (0);
 	ft_free_lists(&p.read);
+	ft_output(&p.output);
 	return (p.output.output_cnt);
 }

@@ -291,6 +291,9 @@
 		<Unit filename="/Users/huller/Desktop/ft_printf/output.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/reader.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

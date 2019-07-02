@@ -10,10 +10,6 @@
 ft_printf.h
 /Users/huller/Desktop/ft_printf/ft_printf.h
 
-/Users/huller/Desktop/ft_printf/ft_printf.c
-ft_printf.h
-/Users/huller/Desktop/ft_printf/ft_printf.h
-
 /Users/huller/Desktop/ft_printf/ft_printf.h
 stdarg.h
 -
@@ -40,11 +36,7 @@ sys/stat.h
 sys/types.h
 -
 
-/Users/huller/Desktop/ft_printf/main.c
-ft_printf.h
-/Users/huller/Desktop/ft_printf/ft_printf.h
-
-/Users/huller/Desktop/ft_printf/output.c
+/Users/huller/Desktop/ft_printf/reader.c
 ft_printf.h
 /Users/huller/Desktop/ft_printf/ft_printf.h
 

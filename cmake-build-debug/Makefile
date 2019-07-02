@@ -1932,6 +1932,33 @@ output.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/output.c.s
 .PHONY : output.c.s
 
+reader.o: reader.c.o
+
+.PHONY : reader.o
+
+# target to build an object file
+reader.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/reader.c.o
+.PHONY : reader.c.o
+
+reader.i: reader.c.i
+
+.PHONY : reader.i
+
+# target to preprocess a source file
+reader.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/reader.c.i
+.PHONY : reader.c.i
+
+reader.s: reader.c.s
+
+.PHONY : reader.s
+
+# target to generate assembly for a file
+reader.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/reader.c.s
+.PHONY : reader.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -2142,6 +2169,9 @@ help:
 	@echo "... output.o"
 	@echo "... output.i"
 	@echo "... output.s"
+	@echo "... reader.o"
+	@echo "... reader.i"
+	@echo "... reader.s"
 .PHONY : help
 
 

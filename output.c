@@ -12,8 +12,8 @@
 
 #include "ft_printf.h"
 
-void    ft_output(t_out **output)
+void    ft_output(t_out *output)
 {
-    while((*output)->buf)
-        ft_putstr((*output)->buf);
+    while(output->buf)
+        ft_putstr(output->buf);
 }

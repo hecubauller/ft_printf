@@ -106,7 +106,7 @@ int			ft_app_size(t_rd **read, t_out **output);
 
 /* OUTPUT */
 
-void		ft_output(t_out **output);
+void		ft_output(t_out *output);
 
 /* TYPES */
 
