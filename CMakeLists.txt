@@ -71,43 +71,9 @@ add_executable(ft_printf
         libft/ft_tolower.c
         libft/ft_toupper.c
         libft/libft.h
-        add_z.c
         apply_flags.c
-        c_str.c
-        e_zrs.c
-        fld_edge.c
-        fr_p.c
-        ft_c.c
-        ft_d.c
-        ft_e.c
-        ft_f.c
-        ft_fld.c
-        ft_g.c
-        ft_itoa_base.c
-        ft_ox.c
-        ft_p.c
         ft_printf.c
         ft_printf.h
-        ft_rg.c
-        ft_round.c
-        int_p.c
         main.c
-        mantis.c
-        mexp.c
         output.c
-        pw.c
-        pw_to_str.c
-        reader.c
-        res_o_fr.c
-        res_w_fr.c
-        rnd.c
-        rnd_z.c
-        rndg.c
-        rndg_z.c
-        s_str.c
-        str_ad.c
-        str_ml.c
-        t_str.c
-        test.c
-        wzrs.c
-        zrs.c)
+        apply_flags.c)

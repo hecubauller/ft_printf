@@ -12,48 +12,79 @@
 
 #include "ft_printf.h"
 
-void ft_chck_mod(t_rd **read, const char *restrict format, va_list **ap)
-{
-    if (format[++(*read)->smb_cnt] == 'o')
-    {
-        (*read)->mod_smb = 'o';
-        if ((*read)->size == 0)
-            (*read)->mod = ft_ox(va_arg(**ap, unsigned int), 1, 1);
-        if ((*read)->size == 8)
-            (*read)->mod = ft_ox(va_arg(**ap, unsigned char), 1, 1);
-        if ((*read)->size == 4)
-            (*read)->mod = ft_ox(va_arg(**ap, unsigned short int), 1, 1);
-        if ((*read)->size == 1)
-            (*read)->mod = ft_ox(va_arg(**ap, unsigned int), 1, 1);
-        if ((*read)->size == 2)
-            (*read)->mod = ft_ox(va_arg(**ap, unsigned int), 1, 1);
-    }
-    if (format[(*read)->smb_cnt] == 'x')
-        (*read)->mod = ft_ox(va_arg(**ap, unsigned int), 0, 1);
-    if (format[(*read)->smb_cnt] == 'X')
-        (*read)->mod = ft_ox(va_arg(**ap, unsigned int), 0, 0);
-    else if (format[(*read)->smb_cnt] == 'c')
-        (*read)->mod = ft_c(va_arg(**ap, int));
-    else if (format[(*read)->smb_cnt] == 's')
-        (*read)->mod = (va_arg(**ap, char *));
-    else if (format[(*read)->smb_cnt] == 'd' || format[(*read)->smb_cnt] == 'i')
-        (*read)->mod = ft_d(va_arg(**ap, int));
-    else if (format[(*read)->smb_cnt] == 'f' || format[(*read)->smb_cnt] == 'F')
-        (*read)->mod = ft_fld(va_arg(**ap, long double));
-    else if (format[(*read)->smb_cnt] == 'e')
-        (*read)->mod = ft_e(va_arg(**ap, long double), 1);
-    else if (format[(*read)->smb_cnt] == 'E')
-        (*read)->mod = ft_e(va_arg(**ap, long double), 0);
-    else if (format[(*read)->smb_cnt] == 'g')
-        (*read)->mod = ft_g(va_arg(**ap, long double), 1, (*read)->width);
-    else if (format[(*read)->smb_cnt] == 'G')
-        (*read)->mod = ft_g(va_arg(**ap, long double), 0, (*read)->width);
-    else if (format[(*read)->smb_cnt] == 'p')
-        (*read)->mod = ft_p(va_arg(**ap, unsigned long long));
-    //создать отмену всех флагов и вывод only строки
-}
+//void ft_chck_mod(t_rd **read, const char *format, va_list **ap)
+//{
+//    if (format[++(*read)->smb_cnt] == 'o')
+//    {
+//        if ((*read)->size == 0)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned int), 1, 1);
+//        else if ((*read)->size == 1)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned long), 1, 1);
+//        else if ((*read)->size == 2)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned long long), 1, 1);
+//        else if ((*read)->size == 4)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned short), 1, 1);
+//        else if ((*read)->size == 8)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned char), 1, 1);
+//    }
+//    else if (format[(*read)->smb_cnt] == 'x')
+//    {
+//        if ((*read)->size == 0)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned int), 0, 1);
+//        else if ((*read)->size == 1)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned long), 0, 1);
+//        else if ((*read)->size == 2)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned long long), 0, 1);
+//        else if ((*read)->size == 4)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned short), 0, 1);
+//        else if ((*read)->size == 8)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned char), 0, 1);
+//    }
+//    else if (format[(*read)->smb_cnt] == 'X')
+//    {
+//        if ((*read)->size == 0)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned int), 0, 0);
+//        else if ((*read)->size == 1)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned long), 0, 0);
+//        else if ((*read)->size == 2)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned long long), 0, 0);
+//        else if ((*read)->size == 4)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned short), 0, 0);
+//        else if ((*read)->size == 8)
+//            (*read)->mod = ft_ox(va_arg(**ap, unsigned char), 0, 0);
+//    }
+//    else if (format[(*read)->smb_cnt] == 'c')
+//        (*read)->mod = ft_c(va_arg(**ap, int));
+//    else if (format[(*read)->smb_cnt] == 's')
+//        (*read)->mod = (va_arg(**ap, char *));
+//    else if (format[(*read)->smb_cnt] == 'd' || format[(*read)->smb_cnt] == 'i')
+//    {
+//        if ((*read)->size == 0)
+//            (*read)->mod = ft_d(va_arg(**ap, int));
+//        else if ((*read)->size == 1)
+//            (*read)->mod = ft_d(va_arg(**ap, long));
+//        else if ((*read)->size == 2)
+//            (*read)->mod = ft_d(va_arg(**ap, long long));
+//        else if ((*read)->size == 4)
+//            (*read)->mod = ft_d(va_arg(**ap, short));
+//        else if ((*read)->size == 8)
+//            (*read)->mod = ft_d(va_arg(**ap, char));
+//    }
+//    else if (format[(*read)->smb_cnt] == 'f' || format[(*read)->smb_cnt] == 'F')
+//        (*read)->mod = ft_fld(va_arg(**ap, long double));
+//    else if (format[(*read)->smb_cnt] == 'e')
+//        (*read)->mod = ft_e(va_arg(**ap, long double), 1);
+//    else if (format[(*read)->smb_cnt] == 'E')
+//        (*read)->mod = ft_e(va_arg(**ap, long double), 0);
+//    else if (format[(*read)->smb_cnt] == 'g')
+//        (*read)->mod = ft_g(va_arg(**ap, long double), 1, (*read)->width);
+//    else if (format[(*read)->smb_cnt] == 'G')
+//        (*read)->mod = ft_g(va_arg(**ap, long double), 0, (*read)->width);
+//    else if (format[(*read)->smb_cnt] == 'p')
+//        (*read)->mod = ft_p(va_arg(**ap, unsigned long long));
+//}
 
-void    ft_chck_size(t_rd **read, const char *restrict format, va_list **ap)
+void    ft_chck_size(t_rd **read, const char *format, va_list **ap)
 {
     int     r;
 
@@ -81,7 +112,7 @@ void    ft_chck_size(t_rd **read, const char *restrict format, va_list **ap)
         (*read)->size |= INT_64;
 }
 
-void    ft_chck_precision(t_rd **read, const char *restrict format)
+void    ft_chck_precision(t_rd **read, const char *format)
 {
     int     r;
 
@@ -101,7 +132,7 @@ void    ft_chck_precision(t_rd **read, const char *restrict format)
     }
 }
 
-void    ft_chck_wdth(t_rd **read, const char *restrict format, va_list **ap)
+void    ft_chck_wdth(t_rd **read, const char *format, va_list **ap)
 {
     int     r;
 
@@ -123,7 +154,7 @@ void    ft_chck_wdth(t_rd **read, const char *restrict format, va_list **ap)
         (*read)->width = r;
 }
 
-void    ft_chck_flags(t_rd **read, const char *restrict format)
+void    ft_chck_flags(t_rd **read, const char *format)
 {
     (*read)->flag = 0;
     (*read)->smb_cnt = 0;

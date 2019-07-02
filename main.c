@@ -14,6 +14,6 @@
 
 int		main()
 {
-	ft_printf("%c", 65);
+	ft_printf("%d", 10);
 	return (0);
 }
