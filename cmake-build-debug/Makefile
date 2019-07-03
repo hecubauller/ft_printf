@@ -1905,33 +1905,6 @@ main.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.s
 .PHONY : main.c.s
 
-output.o: output.c.o
-
-.PHONY : output.o
-
-# target to build an object file
-output.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/output.c.o
-.PHONY : output.c.o
-
-output.i: output.c.i
-
-.PHONY : output.i
-
-# target to preprocess a source file
-output.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/output.c.i
-.PHONY : output.c.i
-
-output.s: output.c.s
-
-.PHONY : output.s
-
-# target to generate assembly for a file
-output.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/output.c.s
-.PHONY : output.c.s
-
 reader.o: reader.c.o
 
 .PHONY : reader.o
@@ -2166,9 +2139,6 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... output.o"
-	@echo "... output.i"
-	@echo "... output.s"
 	@echo "... reader.o"
 	@echo "... reader.i"
 	@echo "... reader.s"

@@ -70,7 +70,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/huller/Desktop/ft_printf/libft/ft_tolower.c" "/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_tolower.c.o"
   "/Users/huller/Desktop/ft_printf/libft/ft_toupper.c" "/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o"
   "/Users/huller/Desktop/ft_printf/main.c" "/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/main.c.o"
-  "/Users/huller/Desktop/ft_printf/output.c" "/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/output.c.o"
   "/Users/huller/Desktop/ft_printf/reader.c" "/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/reader.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")

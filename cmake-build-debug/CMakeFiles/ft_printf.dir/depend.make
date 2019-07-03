@@ -201,10 +201,6 @@ CMakeFiles/ft_printf.dir/main.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/main.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/main.c.o: ../main.c
 
-CMakeFiles/ft_printf.dir/output.c.o: ../ft_printf.h
-CMakeFiles/ft_printf.dir/output.c.o: ../libft/libft.h
-CMakeFiles/ft_printf.dir/output.c.o: ../output.c
-
 CMakeFiles/ft_printf.dir/reader.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/reader.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/reader.c.o: ../reader.c

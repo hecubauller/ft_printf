@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/huller/Desktop/ft_printf/apply_flags.c
-ft_printf.h
-/Users/huller/Desktop/ft_printf/ft_printf.h
-
 /Users/huller/Desktop/ft_printf/ft_printf.h
 stdarg.h
 -

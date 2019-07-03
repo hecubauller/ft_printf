@@ -75,6 +75,5 @@ add_executable(ft_printf
         ft_printf.c
         ft_printf.h
         main.c
-        output.c
         apply_flags.c
         reader.c)

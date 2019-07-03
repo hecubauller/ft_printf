@@ -65,7 +65,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/apply_flags.c.o"
   "CMakeFiles/ft_printf.dir/ft_printf.c.o"
   "CMakeFiles/ft_printf.dir/main.c.o"
-  "CMakeFiles/ft_printf.dir/output.c.o"
   "CMakeFiles/ft_printf.dir/reader.c.o"
   "ft_printf.pdb"
   "ft_printf"

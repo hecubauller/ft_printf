@@ -47,7 +47,7 @@
 typedef struct			s_rd
 {
 	char				*mod;       /* String */
-	char				mod_smb;    /* Symbol of Fromat */
+	char				mod_smb;    /* Symbol of Format */
 	unsigned short int	flag;       /* Flags */
 	unsigned short int	size;       /* Size of Output */
 	unsigned int		smb_cnt;    /* Counter for Checking */
@@ -68,9 +68,9 @@ typedef struct			s_out
 
 typedef struct			s_printf
 {
-	va_list		ap;
-	t_rd		*read;
-	t_out		output;
+	va_list				ap;
+	t_rd				*read;
+	t_out				output;
 }						t_printf;
 
 /* UNION */
@@ -83,11 +83,11 @@ typedef union			u_flts
 
 /* READER */
 
+int			ft_chck_flags(t_rd **read, const char *format);
 void		ft_chck_mod(t_rd **read, const char *format, va_list **ap);
 void		ft_chck_size(t_rd **read, const char *format, va_list **ap);
 void		ft_chck_precision(t_rd **read, const char *format);
 void		ft_chck_wdth(t_rd **read, const char *format, va_list **ap);
-void		ft_chck_flags(t_rd **read, const char *format);
 void		ft_rd(t_rd **rd, va_list *ap, const char *ft, t_out **out);
 
 /* MAIN */
@@ -104,14 +104,9 @@ int			ft_app_width(t_rd **read, t_out **output);
 int			ft_app_prcsn(t_rd **read, t_out **output);
 int			ft_app_size(t_rd **read, t_out **output);
 
-/* OUTPUT */
-
-void		ft_output(t_out *output);
-
 /* TYPES */
 
-//int			ft_printf(const char *format, ...);
-//int			bfpr(const char *format);
+//int		ft_printf(const char *format, ...);
 //char		*ft_d(int n);
 //char		*ft_c(char c);
 //char		*ft_e(long double e, int a);
@@ -119,7 +114,7 @@ void		ft_output(t_out *output);
 //char		*ft_p(unsigned long long p);
 //char		*ft_fld(long double f);
 //char		*ft_g(long double g, int a, int b);
-//int			mexp(t_flts l);
+//int		mexp(t_flts l);
 //char		*mantis(t_flts l);
 //long long	pw(long long n, int p);
 //void		str_ad(char *s1, char *s2);
