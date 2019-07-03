@@ -14,7 +14,8 @@
 
 int		main()
 {
-	ft_printf("%d", 10);
-	//printf("%d", 10);
+	ft_printf("%-0.10d", 10);
+	ft_putchar('\n');
+	printf("%-.10d", 10);
 	return (0);
 }

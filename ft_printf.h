@@ -46,6 +46,7 @@
 
 typedef struct			s_rd
 {
+	wchar_t 			*mod2;
 	char				*mod;       /* String */
 	char				mod_smb;    /* Symbol of Format */
 	unsigned short int	flag;       /* Flags */
@@ -106,38 +107,39 @@ int			ft_app_size(t_rd **read, t_out **output);
 
 /* TYPES */
 
-//int		ft_printf(const char *format, ...);
-//char		*ft_d(int n);
-//char		*ft_c(char c);
-//char		*ft_e(long double e, int a);
-//char		*ft_ox(unsigned int o, int a, int b);
-//char		*ft_p(unsigned long long p);
-//char		*ft_fld(long double f);
-//char		*ft_g(long double g, int a, int b);
-//int		mexp(t_flts l);
-//char		*mantis(t_flts l);
-//long long	pw(long long n, int p);
-//void		str_ad(char *s1, char *s2);
-//void		str_ml(char *s1, int m);
-//char		*pw_to_str(int a, int b);
-//char		*int_p(int e, char *man);
-//char		*fr_p(int i, char *man);
-//char		*add_z(char *s, int z);
-//char		*res_w_fr(int e, char *in, char *fr, int sign);
-//char		*res_o_fr(char *in, char *fr, int sign);
-//char		*ft_itoa_base(long long n, unsigned int b, int c);
-//char		*ft_round(char *s, int a);
-//void		rnd(char *s, int a, int i);
-//void		zrs(char *s, int a, int i);
-//void		e_zrs(char *s, int a, int i);
-//int			t_str(char *s, char **t);
-//void		c_str(char *s, char **c, int i, int k);
-//void		s_str(char **s, char **t, char **c);
-//char		*fld_edge(char **man, int sign);
-//void		rnd_z(char *s, int i);
-//void		rnd(char *s, int a, int i);
-//void		rndg(char *s, int i);
-//void		rndg_z(char *s, int i);
-//char		*ft_rg(char *s, int a);
+char            *ft_d(int n);
+char            *ft_c(char c);
+char            *ft_e(long double e, int a);
+char            *ft_ox(u_int64_t o, int a, int b);
+char            *ft_p(unsigned long long p);
+char            *ft_fld(long double f, int c);
+char            *ft_g(long double g, int a, int b);
+int             mexp(t_flts l);
+char            *mantis(t_flts l);
+long long       pw(long long n, int p);
+char    		*str_ad(char *s1, char *s2);
+void            str_ml(char *s1, int m);
+char            *pw_to_str(int a, int b);
+char            *int_p(int e, char *man);
+char            *fr_p(int i, char *man);
+char            *add_z(char *s, int z);
+char            *res_w_fr(int e, char *in, char *fr, int sign);
+char            *res_o_fr(char *in, char *fr, int sign);
+char            *u_itoa_base(u_int64_t n, u_int64_t b, int c);
+char            *ft_round(char *s, int a);
+void            rnd(char *s, int a, int i);
+void            zrs(char *s, int a, int i);
+void            e_zrs(char *s, int a, int i);
+int             t_str(char *s, char **t);
+void            c_str(char *s, char **c, int i, int k);
+void            s_str(char **s, char **t, char **c);
+char            *fld_edge(char **man, int sign, int c);
+void            rnd_z(char *s, int i);
+void            rnd(char *s, int a, int i);
+void            rndg(char *s, int i);
+void            rndg_z(char *s, int i);
+char            *ft_rg(char *s, int a);
+char            *s_itoa(int64_t n);
+char            *u_itoa(u_int64_t n);
 
 #endif

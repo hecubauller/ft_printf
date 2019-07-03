@@ -12,9 +12,11 @@
 
 #include "ft_printf.h"
 
-void ft_check_mod(t_rd **read, const char *restrict format, va_list **ap)
+void ft_chck_mod(t_rd **read, const char *restrict format, va_list **ap)
 {
-	if (format[++(*read)->smb_cnt] == 'o')
+	(*read)->mod = NULL;
+	(*read)->mod2 = NULL;
+	if (format[(*read)->smb_cnt] == 'o')
 	{
 		(*read)->mod_smb = 'o';
 		if ((*read)->size == 0)
@@ -24,9 +26,9 @@ void ft_check_mod(t_rd **read, const char *restrict format, va_list **ap)
 		else if ((*read)->size == 2)
 			(*read)->mod = ft_ox(va_arg(**ap, unsigned long long), 1, 1);
 		else if ((*read)->size == 4)
-			(*read)->mod = ft_ox(va_arg(**ap, unsigned short), 1, 1);
+			(*read)->mod = ft_ox((unsigned short)va_arg(**ap, unsigned int), 1, 1);
 		else if ((*read)->size == 8)
-			(*read)->mod = ft_ox(va_arg(**ap, unsigned char), 1, 1);
+			(*read)->mod = ft_ox((unsigned char)va_arg(**ap, unsigned int), 1, 1);
 		else if ((*read)->size == 16)
 			(*read)->mod = ft_ox(va_arg(**ap, uintmax_t), 1, 1);
 		else if ((*read)->size == 32 || (*read)->size == 64)
@@ -44,9 +46,9 @@ void ft_check_mod(t_rd **read, const char *restrict format, va_list **ap)
 		else if ((*read)->size == 2)
 			(*read)->mod = ft_ox(va_arg(**ap, unsigned long long), 0, 1);
 		else if ((*read)->size == 4)
-			(*read)->mod = ft_ox(va_arg(**ap, unsigned short), 0, 1);
+			(*read)->mod = ft_ox((unsigned short)va_arg(**ap, unsigned int), 0, 1);
 		else if ((*read)->size == 8)
-			(*read)->mod = ft_ox(va_arg(**ap, unsigned char), 0, 1);
+			(*read)->mod = ft_ox((unsigned char)va_arg(**ap, unsigned int), 0, 1);
 		else if ((*read)->size == 16)
 			(*read)->mod = ft_ox(va_arg(**ap, uintmax_t), 0, 1);
 		else if ((*read)->size == 32 || (*read)->size == 64)
@@ -64,9 +66,9 @@ void ft_check_mod(t_rd **read, const char *restrict format, va_list **ap)
 		else if ((*read)->size == 2)
 			(*read)->mod = ft_ox(va_arg(**ap, unsigned long long), 0, 0);
 		else if ((*read)->size == 4)
-			(*read)->mod = ft_ox(va_arg(**ap, unsigned short), 0, 0);
+			(*read)->mod = ft_ox((unsigned short)va_arg(**ap, unsigned int), 0, 0);
 		else if ((*read)->size == 8)
-			(*read)->mod = ft_ox(va_arg(**ap, unsigned char), 0, 0);
+			(*read)->mod = ft_ox((unsigned char)va_arg(**ap, unsigned int), 0, 0);
 		else if ((*read)->size == 16)
 			(*read)->mod = ft_ox(va_arg(**ap, uintmax_t), 0, 0);
 		else if ((*read)->size == 32 || (*read)->size == 64)
@@ -86,7 +88,7 @@ void ft_check_mod(t_rd **read, const char *restrict format, va_list **ap)
 	{
 		(*read)->mod_smb = 's';
 		if ((*read)->size == 1)
-			(*read)->mod = (va_arg(**ap, wchar_t *));
+			(*read)->mod2 = (va_arg(**ap, wchar_t *));
 		else
 			(*read)->mod = (va_arg(**ap, char *));
 	}
@@ -100,15 +102,13 @@ void ft_check_mod(t_rd **read, const char *restrict format, va_list **ap)
 		else if ((*read)->size == 2)
 			(*read)->mod = ft_d(va_arg(**ap, long long));
 		else if ((*read)->size == 4)
-			(*read)->mod = ft_d(va_arg(**ap, short));
+			(*read)->mod = ft_d((short)va_arg(**ap, int));
 		else if ((*read)->size == 8)
-			(*read)->mod = ft_d(va_arg(**ap, char));
+			(*read)->mod = ft_d((char)va_arg(**ap, int));
 		else if ((*read)->size == 16)
 			(*read)->mod = ft_d(va_arg(**ap, uintmax_t));
-		else if ((*read)->size == 32)
+		else if ((*read)->size == 32 || (*read)->size == 64)
 			(*read)->mod = ft_d(va_arg(**ap, ssize_t));
-		else if ((*read)->size == 64)
-			(*read)->mod = ft_d(va_arg(**ap, ptrdiff_t));
 		else if ((*read)->size == 128)
 			(*read)->mod = ft_d(va_arg(**ap, u_int64_t));
 	}
@@ -140,25 +140,25 @@ void ft_check_mod(t_rd **read, const char *restrict format, va_list **ap)
 	{
 		(*read)->mod_smb = 'E';
 		if ((*read)->size == 128)
-			(*read)->mod = ft_be(va_arg(**ap, long double), 0);
+			(*read)->mod = ft_e(va_arg(**ap, long double), 0);
 		else
-			(*read)->mod = ft_be(va_arg(**ap, double), 0);
+			(*read)->mod = ft_e(va_arg(**ap, double), 0);
 	}
 	else if (format[(*read)->smb_cnt] == 'g')
 	{
 		(*read)->mod_smb = 'g';
 		if ((*read)->size == 128)
-			(*read)->mod = ft_g(va_arg(**ap, long double), 1, (*read)->width);
+			(*read)->mod = ft_g(va_arg(**ap, long double), 1, (*read)->prs);
 		else
-			(*read)->mod = ft_g(va_arg(**ap, double), 1, (*read)->width);
+			(*read)->mod = ft_g(va_arg(**ap, double), 1, (*read)->prs);
 	}
 	else if (format[(*read)->smb_cnt] == 'G')
 	{
 		(*read)->mod_smb = 'G';
 		if ((*read)->size == 128)
-			(*read)->mod = ft_g(va_arg(**ap, long double), 0, (*read)->width);
+			(*read)->mod = ft_g(va_arg(**ap, long double), 0, (*read)->prs);
 		else
-			(*read)->mod = ft_g(va_arg(**ap, double), 0, (*read)->width);
+			(*read)->mod = ft_g(va_arg(**ap, double), 0, (*read)->prs);
 	}
 	else if (format[(*read)->smb_cnt] == 'p')
 	{

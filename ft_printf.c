@@ -54,8 +54,7 @@ void ft_reader(t_rd **read, va_list *ap, const char *format)
 	ft_chck_wdth(read, format, &ap);
 	ft_chck_precision(read, format);
 	ft_chck_size(read, format, &ap);
-	//ft_chck_mod(read, format, &ap);
-	(*read)->mod = "10";
+	ft_chck_mod(read, format, &ap);
 }
 
 void ft_free_lists(t_rd **read)
@@ -66,9 +65,9 @@ void ft_free_lists(t_rd **read)
 	{
 		tmp = (*read);
 		*read = (*read)->prev;
-		free((void *) tmp);
+		free(tmp);
 	}
-	free((void *) read);
+	//free(read);
 }
 
 int ft_printf(const char *format, ...)
@@ -87,6 +86,7 @@ int ft_printf(const char *format, ...)
 	{
 		if (!(p.read->next = (t_rd *)malloc(sizeof(t_rd))))
 			return (0);
+		p.read->prev = NULL;
 		if (!(ft_pt_frst(format, &p.output, &p.read)))
 			return (0);
 		ft_reader(&p.read, &p.ap, format);
@@ -94,11 +94,12 @@ int ft_printf(const char *format, ...)
 		p.read = p.read->next;
 		p.read->prev = tmp;
 		p.read->smb_cnt = p.read->prev->smb_cnt;
+		++p.read->smb_cnt;
 	}
 	va_end(p.ap);
 	if (!(ft_solver(&p.read, &p.output)))
 		return (0);
-	ft_free_lists(&p.read);
 	ft_putstr(p.output.buf);
+	ft_free_lists(&p.read);
 	return (p.output.output_cnt);
 }

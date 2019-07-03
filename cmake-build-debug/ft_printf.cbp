@@ -84,13 +84,67 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/huller/Desktop/ft_printf/add_z.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/apply_flags.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/c_str.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/e_zrs.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/fld_edge.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/fr_p.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_c.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_d.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_e.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_f.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_fld.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_g.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_itoa_base.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_itoa_fp.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_ox.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_p.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/ft_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/ft_printf.h">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_rg.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/ft_round.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/int_p.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/libft/ft_atoi.c">
@@ -288,7 +342,55 @@
 		<Unit filename="/Users/huller/Desktop/ft_printf/main.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/mantis.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/mexp.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/pw.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/pw_to_str.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/reader.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/res_o_fr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/res_w_fr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/rnd.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/rnd_z.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/rndg.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/rndg_z.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/s_str.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/str_ad.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/str_ml.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/t_str.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/wzrs.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/zrs.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/CMakeLists.txt">
