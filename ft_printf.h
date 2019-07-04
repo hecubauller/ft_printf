@@ -54,6 +54,7 @@ typedef struct			s_rd
 	unsigned int		smb_cnt;    /* Counter for Checking */
 	unsigned			width;      /* Field Width */
 	int					prs;        /* Precision */
+	unsigned int		strlen;     /* Size Of String */
 	struct s_rd			*next;
 	struct s_rd			*prev;
 
@@ -102,8 +103,8 @@ int			ft_pt_frst(const char *format, t_out *output, t_rd **rd);
 int			ft_solver(t_rd **read, t_out *output);
 int			ft_app_fl(t_rd **read, t_out **output);
 int			ft_app_width(t_rd **read, t_out **output);
-int			ft_app_prcsn(t_rd **read, t_out **output);
 int			ft_app_size(t_rd **read, t_out **output);
+int 		ft_app_empty_fl(t_rd **read, t_out **output);
 
 /* TYPES */
 

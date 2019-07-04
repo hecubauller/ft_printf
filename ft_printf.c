@@ -14,11 +14,11 @@
 
 int ft_pt_frst(const char *format, t_out *output, t_rd **rd)
 {
-	char *res;
-	char *tmp2;
-	int tmp;
-	int i;
-	int b;
+	char	*res;
+	char	*tmp2;
+	int		tmp;
+	int		i;
+	int		b;
 
 	i = 0;
 	b = -1;
@@ -28,11 +28,11 @@ int ft_pt_frst(const char *format, t_out *output, t_rd **rd)
 		(*rd)->smb_cnt++;
 		i++;
 	}
-	if (!(res = (char *)malloc(sizeof(char) * i)))
+	if (!(res = (char *)malloc(sizeof(char) * (i + 1))))
 		return (0);
 	res[i] = '\0';
 	tmp--;
-	while (res[++b])
+	while (++b < i)
 		res[b] = format[++tmp];
 	tmp2 = (*output).buf;
 	if (!(*output).buf)
@@ -47,10 +47,7 @@ int ft_pt_frst(const char *format, t_out *output, t_rd **rd)
 void ft_reader(t_rd **read, va_list *ap, const char *format)
 {
 	if (ft_chck_flags(read, format) == 1)
-	{
-		(*read)->mod = "%";
 		return ;
-	}
 	ft_chck_wdth(read, format, &ap);
 	ft_chck_precision(read, format);
 	ft_chck_size(read, format, &ap);
@@ -82,23 +79,25 @@ int ft_printf(const char *format, ...)
 	p.output.buf = NULL;
 	if (!(p.read = (t_rd *)malloc(sizeof(t_rd))))
 		return (0);
-	while (format[p.read->smb_cnt])
+	p.read->strlen = ft_strlen(format);
+	p.read->smb_cnt = -1;
+	p.read->prev = NULL;
+	while (format[++p.read->smb_cnt])
 	{
 		if (!(p.read->next = (t_rd *)malloc(sizeof(t_rd))))
 			return (0);
-		p.read->prev = NULL;
 		if (!(ft_pt_frst(format, &p.output, &p.read)))
 			return (0);
 		ft_reader(&p.read, &p.ap, format);
+		if (!(ft_solver(&p.read, &p.output)))
+			return (0);
 		tmp = p.read;
 		p.read = p.read->next;
 		p.read->prev = tmp;
 		p.read->smb_cnt = p.read->prev->smb_cnt;
-		++p.read->smb_cnt;
+		p.read->strlen = p.read->prev->strlen;
 	}
 	va_end(p.ap);
-	if (!(ft_solver(&p.read, &p.output)))
-		return (0);
 	ft_putstr(p.output.buf);
 	ft_free_lists(&p.read);
 	return (p.output.output_cnt);
