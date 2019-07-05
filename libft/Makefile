@@ -3,31 +3,74 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: shunt <marvin@42.fr>                       +#+  +:+       +#+         #
+#    By: sleonia <sleonia@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/04/05 13:43:16 by shunt             #+#    #+#              #
-#    Updated: 2019/04/15 16:14:48 by shunt            ###   ########.fr        #
+#    Created: 2019/04/06 18:14:41 by doberyn           #+#    #+#              #
+#    Updated: 2019/07/05 20:34:58 by huller           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+.PHONY: all, $(NAME), norm, clean, fclean, re
+
+RED = \033[31m
+GREEN = \033[32m
+YELLOW = \033[33m
+BLUE = \033[34m
+PINK = \033[35m
+AQUA = \033[36m
+GREY = \033[37m
+UNDERLINE = \033[4m
+
 NAME = libft.a
 
-SRC = ft_atoi.c ft_bin.c ft_bzero.c ft_calc.c ft_df.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isnum.c ft_isprint.c ft_itoa.c ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memdel.c ft_memmove.c ft_memset.c ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c ft_strcat.c ft_strchr.c ft_strclr.c ft_strcmp.c ft_strcpy.c ft_strdel.c ft_strdup.c ft_strequ.c ft_striter.c ft_striteri.c ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c ft_strrev.c ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c
+SRC_PATH = ./sources/
+OBJ_PATH = ./objects/
+INC_PATH = ./includes/
 
-OBJ = ft_atoi.o ft_bin.o ft_bzero.o ft_calc.o ft_df.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isnum.o ft_isprint.o ft_itoa.o ft_lstadd.o ft_lstdel.o ft_lstdelone.o ft_lstiter.o ft_lstmap.o ft_lstnew.o ft_memalloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memdel.o ft_memmove.o ft_memset.o ft_putchar.o ft_putchar_fd.o ft_putendl.o ft_putendl_fd.o ft_putnbr.o ft_putnbr_fd.o ft_putstr.o ft_putstr_fd.o ft_strcat.o ft_strchr.o ft_strclr.o ft_strcmp.o ft_strcpy.o ft_strdel.o ft_strdup.o ft_strequ.o ft_striter.o ft_striteri.o ft_strjoin.o ft_strlcat.o ft_strlen.o ft_strmap.o ft_strmapi.o ft_strncat.o ft_strncmp.o ft_strncpy.o ft_strnequ.o ft_strnew.o ft_strnstr.o ft_strrchr.o ft_strrev.o ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o ft_tolower.o ft_toupper.o
+SRC = $(addprefix $(SRC_PATH), $(SRC_NAME))
+OBJ = $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+INC = $(addprefix -I, $(INC_PATH))
 
-HEADER = libft.h
+SRC_NAME = ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
+		   ft_memchr.c ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c \
+		   ft_strncpy.c ft_strcat.c ft_strncat.c ft_strlcat.c ft_strchr.c \
+		   ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c \
+		   ft_atoi.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
+		   ft_isprint.c ft_toupper.c ft_tolower.c \
+		   ft_memalloc.c ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c \
+		   ft_striter.c ft_striteri.c ft_strmap.c ft_strmapi.c ft_strequ.c \
+		   ft_strnequ.c ft_strsub.c ft_strjoin.c ft_strtrim.c ft_strsplit.c \
+		   ft_itoa.c ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
+		   ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+		   ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c \
+		   ft_lstmap.c ft_strrev.c ft_abs.c ft_factorial.c ft_sqrt.c get_next_line.c \
 
-all: $(NAME)
+OBJ_NAME = $(SRC_NAME:.c=.o)
 
-$(NAME):
-	@gcc -Wall -Wextra -Werror -c -I $(HEADER) $(SRC)
-	@ar rc $(NAME) $(OBJ)
+all: head $(NAME)
 
-clean:
-	@rm -rf $(OBJ)
+head:
+	@echo -n c
+
+$(OBJ_PATH)%.o: $(SRC_PATH)%.c
+	@mkdir -p $(OBJ_PATH)
+	@gcc -Wall -Werror -Wextra $(INC) -o $@ -c $<
+	@echo -n =
+
+$(NAME): $(OBJ)
+	@echo -n 8
+	@echo "\n$(YELLOW)LIBFT READY!"
+	@ar -rc $(NAME) $?
+	@ranlib $(NAME)
+	
+norm:
+	norminette 
+
+clean: 
+	@rm -rf $(OBJ_PATH)
 
 fclean: clean
-	@rm -rf $(NAME)
+	@rm -rf $(OBJ_PATH)
+	@rm -f $(NAME)
 
 re: fclean all

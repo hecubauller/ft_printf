@@ -14,15 +14,19 @@
 
 char    *ft_ox(u_int64_t o, int a, int b)
 {
-    char    *s;
+	char *s;
 
-    if (a)
-	{
+	if (a == 8) {
 		if (!(s = u_itoa_base(o, 8, 1)))
 			return (NULL);
 	}
-    else
+	else if (a == 16)
+	{
 		if (!(s = (b) ? u_itoa_base(o, 16, 1) : u_itoa_base(o, 16, 0)))
 			return (NULL);
-    return (s);
+	}
+	else if (a == 2)
+		if (!(s = u_itoa_base(o, 2, 1)))
+			return (NULL);
+	return (s);
 }

@@ -37,10 +37,10 @@ int ft_pt_frst(const char *format, t_out *output, t_rd **rd)
 	tmp2 = (*output).buf;
 	if (!(*output).buf)
 		(*output).buf = ft_strnew(0);
-	else
-		(*output).buf = ft_strjoin((*output).buf, res);
+	(*output).buf = ft_strjoin((*output).buf, res);
 	free((void *)res);
 	tmp2 ? free((void *)tmp2) : 0;
+	format[(*rd)->smb_cnt] == '\0' ? (*rd)->smb_cnt-- : 0;
 	return (SUCCESS);
 }
 
@@ -96,6 +96,7 @@ int ft_printf(const char *format, ...)
 		p.read->prev = tmp;
 		p.read->smb_cnt = p.read->prev->smb_cnt;
 		p.read->strlen = p.read->prev->strlen;
+
 	}
 	va_end(p.ap);
 	ft_putstr(p.output.buf);

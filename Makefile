@@ -3,37 +3,85 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: shunt <marvin@42.fr>                       +#+  +:+       +#+         #
+#    By: huller <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/05/20 20:45:39 by shunt             #+#    #+#              #
-#    Updated: 2019/05/29 17:35:44 by shunt            ###   ########.fr        #
+#    Created: 2019/07/05 20:42:10 by huller            #+#    #+#              #
+#    Updated: 2019/07/05 20:51:59 by huller           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+GRN         =   \x1B[32m
+MAG         =   \x1B[35m
+RES         =   \x1B[0m
 
-INCLUDE = ft_printf.h
 
-FT_PRINTF_SRCS = ft_printf.c bfpr.c ft_s.c ft_d.c ft_c.c
+NAME            =   libftprintf.a
 
-LIBFT_SRCS = libft/ft_putstr.c libft/ft_putchar.c libft/ft_putnbr.c libft/ft_itoa.c libft/ft_strlen.c
+# FDF
+SRC_PATH        =   srcs/
+OBJ_PATH        =   srcs/obj/
+INC_PATH        =   includes/
+# LIBFT
+LIB_PATH        =   libft/
+LIB_INC_PATH    =   libft/includes/
 
-OBJS += $(FT_PRINTF_SRCS:.c=.o)
+# PRINTF
+SRC_NAME        =	ft_itoa_fp.c    mexp.c            str_ad.c\
+e_zrs.c           ft_ox.c           pw.c              str_ml.c\
+fld_edge.c        ft_p.c            pw_to_str.c       t_str.c\
+fr_p.c            ft_printf.c       reader.c          wzrs.c\
+ft_c.c            ft_printf.h       res_o_fr.c        zrs.c\
+ft_e.c            ft_round.c        rnd.c\
+add_z.c           ft_f.c            int_p.c           rnd_z.c\
+apply_flags.c     ft_fld.c          libft             rndg.c\
+author            ft_g.c            rndg_z.c\
+c_str.c           ft_itoa_base.c    mantis.c          s_str.c\
+ft_d.c            ft_rg.c           res_w_fr.c
 
-OBJS += ft_putstr.o ft_putchar.o ft_putnbr.o ft_itoa.o ft_strlen.o
+OBJ_NAME        =   $(SRC_NAME:.c=.o)
+INC_NAME        =   ft_printf.h
+# LIBFT
+LIB_NAME        =   libft.a
+LIB_INC_NAME    =   libft.h
 
-all: $(NAME)
+# FDF
+OBJ             =   $(addprefix $(OBJ_PATH), $(OBJ_NAME))
+INC             =   $(addprefix $(INC_PATH), $(INC_NAME))
+# LIBFT
+LIB             =   $(addprefix $(LIB_PATH), $(LIB_NAME))
+LIB_INC         =   $(addprefix $(LIB_INC_PATH), $(LIB_INC_NAME))
 
-$(NAME):
-	@gcc -Wall -Wextra -Werror -c -I $(INCLUDE) -I libft/libft.h $(FT_PRINTF_SRCS) $(LIBFT_SRCS)
-	@ar rc $(NAME) $(OBJS)
+.PHONY:             all $(LIB_NAME) clean fclean re
+
+
+all:                $(LIB_NAME) $(NAME)
+
+# LIBFT
+$(LIB_NAME):
+                    @make -C $(LIB_PATH)
+# PRINTF
+$(NAME):            $(LIB) $(OBJ)
+                    @gcc -Wall -Wextra -Werror $(OBJ) \
+						-L $(LIB_PATH) -lft -o $(NAME)
+                    @echo "$(GRN)\nLinking [ $(NAME) ] SUCCESS$(RES)"
+
+# LIBFT
+$(LIB):             $(LIB_NAME)
+# PRINTF
+$(OBJ_PATH)%.o:     $(SRC_PATH)%.c $(INC) $(LIB_INC)
+                    @mkdir -p $(OBJ_PATH)
+                    @gcc -Wall -Wextra -Werror \
+                        -I $(INC_PATH) -I $(LIB_INC_PATH) -o $@ -c $<
+                    @echo "$(GRN).\c$(RES)"
 
 clean:
-	@/bin/rm -rf *.o
-	@make -C libft clean
+                    @make -C $(LIB_PATH) fclean
+                    @rm -f $(OBJ)
+                    @rm -rf $(OBJ_PATH)
+                    @echo "$(MAG)Cleaning [ $(NAME) ] OK$(RES)"
 
-fclean: clean
-	@/bin/rm -rf $(NAME)
-	@make -C libft fclean
+fclean:             clean
+                    @rm -f $(NAME)
+                    @echo "$(MAG)Delete [ $(NAME) ] OK$(RES)"
 
-re: fclean all
+re:                 fclean all

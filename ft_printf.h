@@ -102,6 +102,7 @@ int			ft_pt_frst(const char *format, t_out *output, t_rd **rd);
 
 int			ft_solver(t_rd **read, t_out *output);
 int			ft_app_fl(t_rd **read, t_out **output);
+int 		ft_app_d_prs(t_rd **read, t_out **output);
 int			ft_app_width(t_rd **read, t_out **output);
 int			ft_app_size(t_rd **read, t_out **output);
 int 		ft_app_empty_fl(t_rd **read, t_out **output);
