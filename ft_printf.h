@@ -18,7 +18,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdio.h>                     // FOR PRINTF (DELETE LATER)
-# include "libft/libft.h"
+# include "libft/includes/libft.h"
 
 /* DIFFERENT */
 
