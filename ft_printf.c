@@ -34,9 +34,9 @@ int ft_pt_frst(const char *format, t_out *output, t_rd **rd)
 	tmp--;
 	while (++b < i)
 		res[b] = format[++tmp];
-	tmp2 = (*output).buf;
 	if (!(*output).buf)
 		(*output).buf = ft_strnew(0);
+	tmp2 = (*output).buf;
 	(*output).buf = ft_strjoin((*output).buf, res);
 	free((void *)res);
 	tmp2 ? free((void *)tmp2) : 0;
@@ -52,6 +52,9 @@ void ft_reader(t_rd **read, va_list *ap, const char *format)
 	ft_chck_precision(read, format);
 	ft_chck_size(read, format, &ap);
 	ft_chck_mod(read, format, &ap);
+	if (((*read)->mod_smb == 'd' || (*read)->mod_smb == 'i') &&
+		(*read)->prs == 6 && (*read)->kostil != 1)
+		(*read)->prs = 0;
 }
 
 void ft_free_lists(t_rd **read)
@@ -64,7 +67,6 @@ void ft_free_lists(t_rd **read)
 		*read = (*read)->prev;
 		free(tmp);
 	}
-	//free(read);
 }
 
 int ft_printf(const char *format, ...)

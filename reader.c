@@ -223,6 +223,7 @@ void    ft_chck_precision(t_rd **read, const char *format)
     int     r;
 
     (*read)->prs = 6;
+	(*read)->kostil = 0;
 	if (format[(*read)->smb_cnt + 1])
 	{
 		r = 0;
@@ -236,6 +237,8 @@ void    ft_chck_precision(t_rd **read, const char *format)
 				    && format[(*read)->smb_cnt + 1] <= '9')
 					r *= 10;
 			}
+			if (r == 6)
+				(*read)->kostil = 1;
 			(*read)->prs = r;
 		}
 	}

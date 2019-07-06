@@ -24,10 +24,10 @@ int 	ft_app_d_prs(t_rd **read, t_out **output)
 	b = -1;
 	if ((*read)->mod)
 	{
-		strlen = ft_strlen((*read)->mod);
 		if ((*read)->prs > ft_strlen((*read)->mod))
 		{
-			if (!(res = (char *) malloc(sizeof(char) * (strlen + 1))))
+			strlen = ft_strlen((*read)->mod);
+			if (!(res = (char *)malloc(sizeof(char)*((*read)->prs + 1))))
 				return (0);
 			res[strlen] = '\0';
 			while (++i != ((*read)->prs - strlen))
@@ -35,10 +35,9 @@ int 	ft_app_d_prs(t_rd **read, t_out **output)
 			i = -1;
 			while ((*read)->mod[++i])
 				res[++b] = (*read)->mod[i];
-			tmp = (*output)->buf;
-			(*output)->buf = ft_strjoin((*output)->buf, res);
-			free((void *) res);
-			free((void *) tmp);
+			tmp = (*read)->mod;
+			(*read)->mod= res;
+			free((void *)tmp);
 		}
 	}
 	return (1);
@@ -56,9 +55,9 @@ int 	ft_app_empty_fl(t_rd **read, t_out **output)
 	b = -1;
 	if ((*read)->mod)
 	{
-		strlen = ft_strlen((*read)->mod);
 		if (((*read)->mod) && (!(*read)->width) && !(*read)->flag)
 		{
+			strlen = ft_strlen((*read)->mod);
 			if (!(res = (char *) malloc(sizeof(char) * (strlen + 1))))
 				return (0);
 			res[strlen] = '\0';
@@ -66,8 +65,8 @@ int 	ft_app_empty_fl(t_rd **read, t_out **output)
 				res[++b] = (*read)->mod[i];
 			tmp = (*output)->buf;
 			(*output)->buf = ft_strjoin((*output)->buf, res);
-			free((void *) res);
-			free((void *) tmp);
+			free((void *)res);
+			free((void *)tmp);
 		}
 	}
 	return (SUCCESS);
@@ -85,13 +84,12 @@ int    ft_app_width(t_rd **read, t_out **output)
 	b = -1;
 	if ((*read)->mod)
 	{
-		strlen = ft_strlen((*read)->mod);
 		if ((*read)->width)
 		{
+			strlen = ft_strlen((*read)->mod);
 			if ((*read)->width > strlen)
 			{
-				if (!(res = (char *) malloc(
-						sizeof(char) * ((*read)->width) + 1)))
+				if (!(res = (char *)malloc(sizeof(char)*((*read)->width) + 1)))
 					return (0);
 				res[(*read)->width] = '\0';
 				if ((*read)->flag == 1) /* if '-' */
@@ -104,7 +102,8 @@ int    ft_app_width(t_rd **read, t_out **output)
 					(*output)->buf = ft_strjoin((*output)->buf, res);
 					free((void *) res);
 					free((void *) tmp);
-				} else if ((*read)->flag == 16) /* if '0' */
+				}
+				else if ((*read)->flag == 16) /* if '0' */
 				{
 					while (++i != ((*read)->width - strlen))
 						res[++b] = '0';
@@ -115,7 +114,8 @@ int    ft_app_width(t_rd **read, t_out **output)
 					(*output)->buf = ft_strjoin((*output)->buf, res);
 					free((void *) res);
 					free((void *) tmp);
-				} else
+				}
+				else //это вообще что ????
 				{
 					while (++i != ((*read)->width - strlen))
 						res[++b] = ' ';
@@ -128,6 +128,12 @@ int    ft_app_width(t_rd **read, t_out **output)
 					free((void *) tmp);
 				}
 
+			}
+			else if ((*read)->width <= strlen)
+			{
+				tmp = (*output)->buf;
+				(*output)->buf = ft_strjoin((*output)->buf, (*read)->mod);
+				free((void *)tmp);
 			}
 		}
 	}
@@ -143,25 +149,26 @@ int    ft_app_fl(t_rd **read, t_out **output)
 	char	*tmp;
 
 	i = -1;
-	b = -1;
+	b = 0;
 	if ((*read)->mod)
 	{
-		strlen = ft_strlen((*read)->mod);
 		if ((*read)->flag == 2 && (*read)->mod[0] != '-') //+ для положит чисел
 		{
-			if ((*read)->prs == 6) //без точности
-			{
-				if (!(res = (char *) malloc(
-						sizeof(char) * ((*read)->width) + 1)))
-					return (0);
-				res[(*read)->width] = '\0';
-
-			}
+			strlen = ft_strlen((*read)->mod);
+			if (!(res = (char *) malloc(sizeof(char) * (strlen + 2))))
+				return (0);
+			res[strlen + 1] = '\0';
+			res[0] = '+';
+			while ((*read)->mod[++i])
+				res[++b] = (*read)->mod[i];
+			tmp = (*read)->mod;
+			(*read)->mod = res;
+			free((void *) tmp);
 		}
-//	if ((*read)->flag == 4) //вывести пробел перед строкой вм
-//	есто знака у положит чисел (если есть ширина, то не выводится)
+//	if ((*read)->flag == 4) //вывести пробел перед строкой
+//	вместо знака у положит чисел (если есть ширина, то не выводится)
 //		;
-//	if ((*read)->flag == 8)
+//	if ((*read)->flag == 8) ##########
 //		;
 	}
 	return (SUCCESS);
@@ -169,16 +176,17 @@ int    ft_app_fl(t_rd **read, t_out **output)
 
 int    ft_solver(t_rd **read, t_out *output)
 {
-	if (!(ft_app_fl(read, &output)))
-		return (0);
-	if (!(ft_app_width(read, &output)))
-		return (0);
 	if (((*read)->mod_smb == 'd' || (*read)->mod_smb == 'i') &&
-		((*read)->prs != 6))
+		((*read)->prs))
 	{
 		if (!(ft_app_d_prs(read, &output)))
 			return (0);
 	}
-	else if (!(ft_app_empty_fl(read, &output)))
+	if (!(ft_app_fl(read, &output)))
+		return (0);
+	if (!(ft_app_width(read, &output)))
+		return (0);
+	if (!(ft_app_empty_fl(read, &output)))
 		return (0);
 }
+//менять все в mod, а выводить уже в конце в ft_app_empty_fl

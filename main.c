@@ -14,7 +14,7 @@
 
 int		main()
 {
-	ft_printf("hello\n");
-	printf("%.10f\n", 10.65);
+	ft_printf("%.6f\n", 10.345);
+	printf("%.6f\n", 10.345);
 	return (0);
 }

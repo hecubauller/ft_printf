@@ -52,6 +52,7 @@ typedef struct			s_rd
 	unsigned short int	flag;       /* Flags */
 	unsigned short int	size;       /* Size of Output */
 	unsigned int		smb_cnt;    /* Counter for Checking */
+	unsigned int        kostil;     /* Kostil for prs */
 	unsigned			width;      /* Field Width */
 	int					prs;        /* Precision */
 	unsigned int		strlen;     /* Size Of String */
