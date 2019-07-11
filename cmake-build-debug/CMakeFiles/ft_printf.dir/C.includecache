@@ -6,27 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/Users/huller/Desktop/ft_printf/ft_printf.h
-stdarg.h
--
-unistd.h
--
-stdlib.h
--
-stdio.h
--
-libft/includes/libft.h
-/Users/huller/Desktop/ft_printf/libft/includes/libft.h
-
-/Users/huller/Desktop/ft_printf/libft/includes/libft.h
-stdlib.h
--
-unistd.h
--
-string.h
--
-
-/Users/huller/Desktop/ft_printf/main.c
-ft_printf.h
-/Users/huller/Desktop/ft_printf/ft_printf.h
-
