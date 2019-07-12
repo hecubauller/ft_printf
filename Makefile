@@ -41,6 +41,7 @@ LIB_NAME        =   libft.a
 LIB_INC_NAME    =   libft.h
 
 # PRINTF
+SRC             =   $(addprefix $(SRC_PATH), $(SRC_NAME))
 OBJ             =   $(addprefix $(OBJ_PATH), $(OBJ_NAME))
 INC             =   $(addprefix $(INC_PATH), $(INC_NAME))
 
@@ -51,26 +52,18 @@ LIB_INC         =   $(addprefix $(LIB_INC_PATH), $(LIB_INC_NAME))
 .PHONY:             all $(LIB_NAME) clean fclean re
 
 
-all:                $(LIB_NAME) $(NAME)
+all:                $(NAME)
+
+# PRINTF
+$(NAME):            $(LIB_NAME)
+	@gcc -Wall -Wextra -Werror -I $(INC) -I $(LIB_INC) -c -o $(SRC) \
+	-L $(LIB_PATH) -lft
+	@ar rc $(NAME) $(OBJ_NAME)
+	@echo "$(GRN)\nLinking [ $(NAME) ] SUCCESS$(RES)"
 
 # LIBFT
 $(LIB_NAME):
 	@make -C $(LIB_PATH)
-
-# PRINTF
-$(NAME):            $(LIB) $(OBJ)
-	@gcc -Wall -Wextra -Werror $(OBJ) \
-	-L $(LIB_PATH) -lft -o $(NAME)
-	@echo "$(GRN)\nLinking [ $(NAME) ] SUCCESS$(RES)"
-
-# LIBFT
-$(LIB):             $(LIB_NAME)
-# PRINTF
-$(OBJ_PATH)%.o:     $(SRC_PATH)%.c $(INC) $(LIB_INC)
-					@mkdir -p $(OBJ_PATH)
-					@gcc -Wall -Wextra -Werror \
-                        -I $(INC_PATH) -I $(LIB_INC_PATH) -o $@ -c $<
-	@echo "$(GRN).\c$(RES)"
 
 clean:
 	@make -C $(LIB_PATH) fclean

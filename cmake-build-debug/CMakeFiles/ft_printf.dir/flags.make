@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu11
 
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/huller/Desktop/ft_printf/. -I/Users/huller/Desktop/ft_printf/libft/includes 
+C_INCLUDES = -I/Users/huller/Desktop/ft_printf/includes -I/Users/huller/Desktop/ft_printf/libft/includes 
 

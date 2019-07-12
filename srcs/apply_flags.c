@@ -16,7 +16,7 @@ int 	ft_app_d_prs(t_rd **read)
 {
 	unsigned long		i;
 	int 	            b;
-	unsigned long 	            strlen;
+	unsigned long 	    strlen;
 	char 	            *res;
 	char	            *tmp;
 
@@ -52,17 +52,19 @@ int 	ft_app_d_prs(t_rd **read)
 int 	ft_app_empty_fl(t_rd **read, t_out **output)
 {
 	unsigned long	i;
-	int 	b;
+	int 	        b;
 	unsigned long 	strlen;
-	char 	*res;
-	char	*tmp;
+	char 	        *res;
+	char	        *tmp;
 
 	i = 0;
 	b = -1;
+	b = -1;
+	b = -1;
 	if ((*read)->mod)
 	{
-		if (((*read)->mod) && (!(*read)->width) && !(*read)->flag)
-		{
+//		if (((*read)->mod) && (!(*read)->width) && !(*read)->flag)
+//		{
 			strlen = ft_strlen((*read)->mod);
 			if (!(res = (char *) malloc(sizeof(char) * (strlen + 1))))
 				return (0);
@@ -76,18 +78,18 @@ int 	ft_app_empty_fl(t_rd **read, t_out **output)
 			(*output)->buf = ft_strjoin((*output)->buf, res);
 			free((void *)res);
 			free((void *)tmp);
-		}
+//		}
 	}
 	return (SUCCESS);
 }
 
 int    ft_app_width(t_rd **read, t_out **output)
 {
-	unsigned long	i;
-	int 	b;
 	unsigned long 	strlen;
-	char 	*res;
-	char	*tmp;
+	unsigned long	i;
+	int 	        b;
+	char 	        *res;
+	char	        *tmp;
 
 	i = 0;
 	b = -1;
@@ -117,7 +119,7 @@ int    ft_app_width(t_rd **read, t_out **output)
 				}
 				else if ((*read)->flag == 16) /* if '0' */
 				{
-					while (++i != ((*read)->width - strlen))
+					while (++i != ((*read)->width - strlen + 1))
 						res[++b] = '0';
 					i = -1;
 					while ((*read)->mod[++i])
@@ -127,9 +129,9 @@ int    ft_app_width(t_rd **read, t_out **output)
 					free((void *) res);
 					free((void *) tmp);
 				}
-				else //это вообще что ????
+				else /* Whitout flags */
 				{
-					while (++i != ((*read)->width - strlen))
+					while (++i != ((*read)->width - strlen + 1))
 						res[++b] = ' ';
 					i = -1;
 					while ((*read)->mod[++i])
@@ -155,19 +157,19 @@ int    ft_app_width(t_rd **read, t_out **output)
 int    ft_app_fl(t_rd **read)
 {
 	unsigned long		i;
-	int 	b;
-	unsigned long 	strlen;
-	char 	*res;
-	char	*tmp;
+	int 	            b;
+	unsigned long 	    strlen;
+	char 	            *res;
+	char	            *tmp;
 
 	i = 0;
 	b = 0;
 	if ((*read)->mod)
 	{
-		if ((*read)->flag == 2 && (*read)->mod[0] != '-') //+ для положит чисел
+		if ((*read)->flag == 2 && (*read)->mod[0] != '-') /* For Positive nbr */
 		{
 			strlen = ft_strlen((*read)->mod);
-			if (!(res = (char *) malloc(sizeof(char) * (strlen + 2))))
+			if (!(res = (char *)malloc(sizeof(char) * (strlen + 2))))
 				return (0);
 			res[strlen + 1] = '\0';
 			res[0] = '+';
@@ -180,7 +182,25 @@ int    ft_app_fl(t_rd **read)
 			(*read)->mod = res;
 			free((void *) tmp);
 		}
-//	if ((*read)->flag == 4) //вывести пробел перед строкой
+	if ((*read)->flag == 4 && (*read)->mod[0] != '-') //вывести пробел перед строкой
+	{
+		strlen = ft_strlen((*read)->mod);
+//		if ((*read)->width > (strlen + 1))
+//		{
+			if (!(res = (char *)malloc(sizeof(char) * (strlen + 2))))
+				return (0);
+			res[strlen + 1] = '\0';
+			res[0] = ' ';
+			while ((*read)->mod[i])
+			{
+				res[++b] = (*read)->mod[i];
+				++i;
+			}
+			tmp = (*read)->mod;
+			(*read)->mod = res;
+			free((void *) tmp);
+		}
+//	}
 //	вместо знака у положит чисел (если есть ширина, то не выводится)
 //		;
 //	if ((*read)->flag == 8) ##########

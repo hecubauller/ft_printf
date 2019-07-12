@@ -102,5 +102,5 @@ int ft_printf(const char *format, ...)
 	va_end(p.ap);
 	ft_putstr(p.output.buf);
 	ft_free_lists(&p.read);
-	return (p.output.output_cnt);
+	return (p.output.output_cnt); //посчитать символы
 }

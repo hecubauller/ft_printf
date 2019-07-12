@@ -3,10 +3,11 @@ project(ft_printf C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(.)
+include_directories(includes)
 include_directories(libft/includes)
 
 add_executable(ft_printf
+        includes/ft_printf.h
         libft/includes/get_next_line.h
         libft/includes/libft.h
         libft/sources/ft_abs.c
@@ -72,42 +73,41 @@ add_executable(ft_printf
         libft/sources/ft_tolower.c
         libft/sources/ft_toupper.c
         libft/sources/get_next_line.c
-        add_z.c
-        apply_flags.c
-        c_str.c
-        e_zrs.c
-        fld_edge.c
-        fr_p.c
-        ft_c.c
-        ft_d.c
-        ft_e.c
-        ft_f.c
-        ft_fld.c
-        ft_g.c
-        ft_itoa_base.c
-        ft_itoa_fp.c
-        ft_ox.c
-        ft_p.c
-        ft_printf.c
-        ft_printf.h
-        ft_rg.c
-        ft_round.c
-        int_p.c
-        main.c
-        mantis.c
-        mexp.c
-        pw.c
-        pw_to_str.c
-        reader.c
-        res_o_fr.c
-        res_w_fr.c
-        rnd.c
-        rnd_z.c
-        rndg.c
-        rndg_z.c
-        s_str.c
-        str_ad.c
-        str_ml.c
-        t_str.c
-        wzrs.c
-        zrs.c)
+        srcs/add_z.c
+        srcs/apply_flags.c
+        srcs/c_str.c
+        srcs/e_zrs.c
+        srcs/fld_edge.c
+        srcs/fr_p.c
+        srcs/ft_c.c
+        srcs/ft_d.c
+        srcs/ft_e.c
+        srcs/ft_f.c
+        srcs/ft_fld.c
+        srcs/ft_g.c
+        srcs/ft_itoa_base.c
+        srcs/ft_itoa_fp.c
+        srcs/ft_ox.c
+        srcs/ft_p.c
+        srcs/ft_printf.c
+        srcs/ft_rg.c
+        srcs/ft_round.c
+        srcs/int_p.c
+        srcs/mantis.c
+        srcs/mexp.c
+        srcs/pw.c
+        srcs/pw_to_str.c
+        srcs/reader.c
+        srcs/res_o_fr.c
+        srcs/res_w_fr.c
+        srcs/rnd.c
+        srcs/rnd_z.c
+        srcs/rndg.c
+        srcs/rndg_z.c
+        srcs/s_str.c
+        srcs/str_ad.c
+        srcs/str_ml.c
+        srcs/t_str.c
+        srcs/wzrs.c
+        srcs/zrs.c
+        main.c)
