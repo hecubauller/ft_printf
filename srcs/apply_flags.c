@@ -63,8 +63,8 @@ int 	ft_app_empty_fl(t_rd **read, t_out **output)
 	b = -1;
 	if ((*read)->mod)
 	{
-//		if (((*read)->mod) && (!(*read)->width) && !(*read)->flag)
-//		{
+		if (((*read)->mod) && (!(*read)->width) && !(*read)->flag)
+		{
 			strlen = ft_strlen((*read)->mod);
 			if (!(res = (char *) malloc(sizeof(char) * (strlen + 1))))
 				return (0);
@@ -78,7 +78,7 @@ int 	ft_app_empty_fl(t_rd **read, t_out **output)
 			(*output)->buf = ft_strjoin((*output)->buf, res);
 			free((void *)res);
 			free((void *)tmp);
-//		}
+		}
 	}
 	return (SUCCESS);
 }
