@@ -60,7 +60,7 @@ void ft_reader(t_rd **read, va_list *ap, const char *format)
 {
 	ft_chck_flags(read, format);
 	ft_chck_wdth(read, format, &ap);
-	ft_chck_precision(read, format);
+	ft_chck_precision(read, format, &ap);
 	ft_chck_size(read, format, &ap);
 	ft_chck_mod(read, format, &ap);
 	if (((*read)->mod_smb == 'd' || (*read)->mod_smb == 'i') &&

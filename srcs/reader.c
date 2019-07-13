@@ -189,12 +189,9 @@ void ft_chck_mod(t_rd **read, const char *restrict format, va_list **ap)
 
 void    ft_chck_size(t_rd **read, const char *format, va_list **ap)
 {
-    int     r;
-
     (*read)->size = 0;
 	if (format[(*read)->smb_cnt + 1])
 	{
-		r = 0;
 		if (format[(*read)->smb_cnt] == '*')
 			(*read)->size = va_arg(**ap, int);
 		else if (format[(*read)->smb_cnt] == 'l')
@@ -218,7 +215,7 @@ void    ft_chck_size(t_rd **read, const char *format, va_list **ap)
 	}
 }
 
-void    ft_chck_precision(t_rd **read, const char *format)
+void    ft_chck_precision(t_rd **read, const char *format, va_list **ap)
 {
     int     r;
 
@@ -228,7 +225,9 @@ void    ft_chck_precision(t_rd **read, const char *format)
 	{
 		if (format[(*read)->smb_cnt] == '.')
 		{
-		r = 0;
+			r = 0;
+			if (format[++(*read)->smb_cnt] == '*')
+				r = va_arg(**ap, int);
 			while (format[++(*read)->smb_cnt] >= '0' &&
 			       format[(*read)->smb_cnt] <= '9')
 			{
