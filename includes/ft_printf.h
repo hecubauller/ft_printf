@@ -20,10 +20,15 @@
 # include <stdio.h>                     // FOR PRINTF (DELETE LATER)
 # include "../libft/includes/libft.h"
 
-/* DIFFERENT */
+/*
+**  DIFFERENT
+*/
 
 # define SUCCESS		1
-/* FLAGS (MASKS) */
+
+/*
+**  FLAGS (MASKS)
+*/
 
 # define F_MINUS         (1u << 0u)		/* '-' */  /*    1 */
 # define F_PLUS          (1u << 1u)		/* '+' */  /*    2 */
@@ -31,7 +36,9 @@
 # define F_OCT           (1u << 3u)		/* '#' */  /*    8 */
 # define F_ZERO          (1u << 4u)		/* '0' */  /*   16 */
 
-/* SIZE (MASKS) */
+/*
+**  SIZE (MASKS)
+*/
 
 # define LONG_INT        (1u << 0u)     /* 'l' */  /*    1 */
 # define LONG_LONG_INT   (1u << 1u)     /* 'll'*/  /*    2 */
@@ -42,7 +49,9 @@
 # define PTRDIFF_T       (1u << 6u)     /* 't' */  /*   64 */
 # define INT_64          (1u << 7u)     /* 'L' */  /*  128 */
 
-/* STRUCTURES */
+/*
+**  STRUCTURES
+*/
 
 typedef struct			s_rd
 {
@@ -76,7 +85,9 @@ typedef struct			s_printf
 	t_out				output;
 }						t_printf;
 
-/* UNION */
+/*
+**  UNION
+*/
 
 typedef union			u_flts
 {
@@ -84,8 +95,11 @@ typedef union			u_flts
 	short				y[5];
 }						t_flts;
 
-/* READER */
+/*
+**  READER
+*/
 
+void        ft_reader(t_rd **read, va_list *ap, const char *format);
 void		ft_chck_flags(t_rd **read, const char *format);
 void		ft_chck_mod(t_rd **read, const char *format, va_list **ap);
 void		ft_chck_size(t_rd **read, const char *format, va_list **ap);
@@ -93,22 +107,34 @@ void		ft_chck_precision(t_rd **read, const char *format);
 void		ft_chck_wdth(t_rd **read, const char *format, va_list **ap);
 void		ft_rd(t_rd **rd, va_list *ap, const char *ft, t_out **out);
 
-/* MAIN */
+/*
+**  MAIN
+*/
 
 void		ft_free_lists(t_rd **read);
 int			ft_printf(const char *format, ...);
 int			ft_pt_frst(const char *format, t_out *output, t_rd **rd);
 
-/* SOLVER */
+/*
+**  SOLVER
+*/
 
 int			ft_solver(t_rd **read, t_out *output);
 int			ft_app_fl(t_rd **read);
 int 		ft_app_d_prs(t_rd **read);
-int			ft_app_width(t_rd **read, t_out **output);
+int			ft_app_width(t_rd **read);
 int			ft_app_size(t_rd **read, t_out **output);
-int 		ft_app_empty_fl(t_rd **read, t_out **output);
+int 		ft_put_out(t_rd **read, t_out **output);
 
-/* TYPES */
+/*
+**  OUTPUT
+*/
+
+void    ft_out_cnt(t_out *output);
+
+/*
+**  TYPES
+*/
 
 char            *ft_d(int n);
 char            *ft_c(char c);

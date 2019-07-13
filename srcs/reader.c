@@ -226,9 +226,9 @@ void    ft_chck_precision(t_rd **read, const char *format)
 	(*read)->kostil = 0;
 	if (format[(*read)->smb_cnt + 1])
 	{
-		r = 0;
 		if (format[(*read)->smb_cnt] == '.')
 		{
+		r = 0;
 			while (format[++(*read)->smb_cnt] >= '0' &&
 			       format[(*read)->smb_cnt] <= '9')
 			{
@@ -251,9 +251,9 @@ void    ft_chck_wdth(t_rd **read, const char *format, va_list **ap)
     (*read)->width = 0;
 	if (format[(*read)->smb_cnt + 1])
 	{
-		if (format[(*read)->smb_cnt] == '*')
-			(*read)->width = va_arg(**ap, int);
 		r = 0;
+		if (format[(*read)->smb_cnt] == '*')
+			r = va_arg(**ap, int);
 		if (format[(*read)->smb_cnt - 1] == '#')
 			(*read)->smb_cnt++;
 		while (format[(*read)->smb_cnt] != '.' &&

@@ -42,14 +42,14 @@ int 	ft_app_d_prs(t_rd **read)
 				++i;
 			}
 			tmp = (*read)->mod;
-			(*read)->mod= res;
+			(*read)->mod = res;
 			free((void *)tmp);
 		}
 	}
 	return (1);
 }
 
-int 	ft_app_empty_fl(t_rd **read, t_out **output)
+int 	ft_put_out(t_rd **read, t_out **output)
 {
 	unsigned long	i;
 	int 	        b;
@@ -63,27 +63,24 @@ int 	ft_app_empty_fl(t_rd **read, t_out **output)
 	b = -1;
 	if ((*read)->mod)
 	{
-		if (((*read)->mod) && (!(*read)->width) && !(*read)->flag)
+		strlen = ft_strlen((*read)->mod);
+		if (!(res = (char *) malloc(sizeof(char) * (strlen + 1))))
+			return (0);
+		res[strlen] = '\0';
+		while ((*read)->mod[i])
 		{
-			strlen = ft_strlen((*read)->mod);
-			if (!(res = (char *) malloc(sizeof(char) * (strlen + 1))))
-				return (0);
-			res[strlen] = '\0';
-			while ((*read)->mod[i])
-			{
-				res[++b] = (*read)->mod[i];
-				++i;
-			}
-			tmp = (*output)->buf;
-			(*output)->buf = ft_strjoin((*output)->buf, res);
-			free((void *)res);
-			free((void *)tmp);
+			res[++b] = (*read)->mod[i];
+			++i;
 		}
+		tmp = (*output)->buf;
+		(*output)->buf = ft_strjoin((*output)->buf, res);
+		free((void *)res);
+		free((void *)tmp);
 	}
 	return (SUCCESS);
 }
 
-int    ft_app_width(t_rd **read, t_out **output)
+int    ft_app_width(t_rd **read)
 {
 	unsigned long 	strlen;
 	unsigned long	i;
@@ -112,9 +109,8 @@ int    ft_app_width(t_rd **read, t_out **output)
 					}
 					while (res[++b])
 						res[b] = ' ';
-					tmp = (*output)->buf;
-					(*output)->buf = ft_strjoin((*output)->buf, res);
-					free((void *) res);
+					tmp = (*read)->mod;
+					(*read)->mod = res;
 					free((void *) tmp);
 				}
 				else if ((*read)->flag == 16) /* if '0' */
@@ -124,9 +120,8 @@ int    ft_app_width(t_rd **read, t_out **output)
 					i = -1;
 					while ((*read)->mod[++i])
 						res[++b] = (*read)->mod[i];
-					tmp = (*output)->buf;
-					(*output)->buf = ft_strjoin((*output)->buf, res);
-					free((void *) res);
+					tmp = (*read)->mod;
+					(*read)->mod = res;
 					free((void *) tmp);
 				}
 				else /* Whitout flags */
@@ -136,18 +131,11 @@ int    ft_app_width(t_rd **read, t_out **output)
 					i = -1;
 					while ((*read)->mod[++i])
 						res[++b] = (*read)->mod[i];
-					tmp = (*output)->buf;
-					(*output)->buf = ft_strjoin((*output)->buf, res);
-					free((void *) res);
+					tmp = (*read)->mod;
+					(*read)->mod = res;
 					free((void *) tmp);
 				}
 
-			}
-			else if ((*read)->width <= strlen)
-			{
-				tmp = (*output)->buf;
-				(*output)->buf = ft_strjoin((*output)->buf, (*read)->mod);
-				free((void *)tmp);
 			}
 		}
 	}
@@ -182,12 +170,10 @@ int    ft_app_fl(t_rd **read)
 			(*read)->mod = res;
 			free((void *) tmp);
 		}
-	if ((*read)->flag == 4 && (*read)->mod[0] != '-') //вывести пробел перед строкой
+	if ((*read)->flag == 4 && (*read)->mod[0] != '-') /* ' ' flag */
 	{
 		strlen = ft_strlen((*read)->mod);
-//		if ((*read)->width > (strlen + 1))
-//		{
-			if (!(res = (char *)malloc(sizeof(char) * (strlen + 2))))
+		if (!(res = (char *)malloc(sizeof(char) * (strlen + 2))))
 				return (0);
 			res[strlen + 1] = '\0';
 			res[0] = ' ';
@@ -200,7 +186,6 @@ int    ft_app_fl(t_rd **read)
 			(*read)->mod = res;
 			free((void *) tmp);
 		}
-//	}
 //	вместо знака у положит чисел (если есть ширина, то не выводится)
 //		;
 //	if ((*read)->flag == 8) ##########
@@ -219,9 +204,9 @@ int    ft_solver(t_rd **read, t_out *output)
 	}
 	if (!(ft_app_fl(read)))
 		return (0);
-	if (!(ft_app_width(read, &output)))
+	if (!(ft_app_width(read)))
 		return (0);
-	if (!(ft_app_empty_fl(read, &output)))
+	if (!(ft_put_out(read, &output)))
 		return (0);
 	return (1);
 }

@@ -6,7 +6,7 @@
 #    By: huller <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/07/05 20:42:10 by huller            #+#    #+#              #
-#    Updated: 2019/07/11 19:17:13 by huller           ###   ########.fr        #
+#    Updated: 2019/07/12 22:59:27 by shunt            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,11 +55,15 @@ LIB_INC         =   $(addprefix $(LIB_INC_PATH), $(LIB_INC_NAME))
 all:                $(NAME)
 
 # PRINTF
-$(NAME):            $(LIB_NAME)
-	@gcc -Wall -Wextra -Werror -I $(INC) -I $(LIB_INC) -c -o $(SRC) \
-	-L $(LIB_PATH) -lft
-	@ar rc $(NAME) $(OBJ_NAME)
+$(NAME):		$(LIB_NAME)	$(OBJ)
+	@cp $(LIB) $(NAME)
+	@ar r $(NAME) $(OBJ)
 	@echo "$(GRN)\nLinking [ $(NAME) ] SUCCESS$(RES)"
+
+$(OBJ_PATH)%.o:		$(SRC_PATH)%.c $(INC) $(LIB_INC)
+	@mkdir -p $(OBJ_PATH)
+	@gcc -Wall -Wextra -Wextra \
+		-I $(INC_PATH) -I $(LIB_INC_PATH) -o $@ -c $<
 
 # LIBFT
 $(LIB_NAME):
@@ -75,5 +79,4 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "$(MAG)Delete [ $(NAME) ] OK$(RES)"
 
-re:
-	fclean all
+re: fclean all

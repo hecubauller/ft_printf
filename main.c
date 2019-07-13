@@ -14,7 +14,11 @@
 
 int		main()
 {
-	ft_printf("%4.0f\n", 10.34);
-	printf("%4.0f\n", 10.34);
+//	ft_printf("% 0.0f\n", 10.34);
+//	printf("% 0.0f\n", 10.34);
+	printf("{%*3d}\n", 5, 0);
+	ft_printf("{%*3d}\n", 5, 0);
+
+
 	return (0);
 }
