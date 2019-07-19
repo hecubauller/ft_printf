@@ -14,9 +14,9 @@
 
 int		main()
 {
-	printf("% Z%s", "test");
+	printf("% Z", "test");
 	printf("\n");
-	ft_printf("% Z%s", "test");
+	ft_printf("% Z", "test");
 
 
 	return (0);

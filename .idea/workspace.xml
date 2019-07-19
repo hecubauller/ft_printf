@@ -12,133 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="359a5004-c2f9-4bb2-bbf5-ed747624568e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/srcs/ft_put_percent.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/C.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/C.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/main.c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/apply_flags.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/apply_flags.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_d.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_d.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/reader.c.o" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ft_printf.dir/srcs/reader.c.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_printf" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_printf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ft_printf.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ft_printf.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/includes/ft_printf.h" beforeDir="false" afterPath="$PROJECT_DIR$/includes/ft_printf.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/libft.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_abs.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_atoi.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_bzero.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_factorial.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_isalnum.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_isalpha.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_isascii.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_isdigit.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_isprint.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_itoa.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_lstadd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_lstdel.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_lstdelone.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_lstiter.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_lstmap.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_lstnew.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_memalloc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_memccpy.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_memchr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_memcmp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_memcpy.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_memdel.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_memmove.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_putchar.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_putchar_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_putendl.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_putendl_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_putnbr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_putnbr_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_putstr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_putstr_fd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_sqrt.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strcat.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strchr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strclr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strcmp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strcpy.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strdel.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strdup.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strequ.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_striter.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_striteri.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strjoin.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strlcat.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strlen.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strmap.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strmapi.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strncat.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strncmp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strncpy.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strnequ.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strnew.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strnstr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strrchr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strrev.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strsplit.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strstr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strsub.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_strtrim.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_tolower.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/ft_toupper.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libft/objects/get_next_line.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libftprintf.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/apply_flags.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/apply_flags.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_d.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/ft_d.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/ft_printf.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/ft_printf.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/add_z.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/apply_flags.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/c_str.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/e_zrs.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/fld_edge.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/fr_p.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_c.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_d.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_e.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_f.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_fld.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_g.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_itoa_base.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_itoa_fp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_ox.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_p.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_printf.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_rg.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/ft_round.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/int_p.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/mantis.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/mexp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/pw.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/pw_to_str.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/reader.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/res_o_fr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/res_w_fr.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/rnd.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/rnd_z.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/rndg.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/rndg_z.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/s_str.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/str_ad.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/str_ml.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/t_str.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/wzrs.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/obj/zrs.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/srcs/reader.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/reader.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/99" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/srcs/ft_put_percent.c" beforeDir="false" afterPath="$PROJECT_DIR$/srcs/ft_put_percent.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -154,7 +30,7 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.76642615">
       <split-first>
-        <splitter split-orientation="horizontal" split-proportion="0.4586019">
+        <splitter split-orientation="horizontal" split-proportion="0.43480417">
           <split-first>
             <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file pinned="false" current-in-tab="false">
@@ -169,8 +45,8 @@
               <file pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/srcs/ft_put_percent.c">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="498">
-                      <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+                    <state relative-caret-position="703">
+                      <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
                     </state>
                   </provider>
                 </entry>
@@ -178,7 +54,7 @@
             </leaf>
           </split-first>
           <split-second>
-            <splitter split-orientation="horizontal" split-proportion="0.5007194">
+            <splitter split-orientation="horizontal" split-proportion="0.6184211">
               <split-first>
                 <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
                   <file pinned="false" current-in-tab="true">
@@ -197,7 +73,7 @@
                   <file pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/srcs/apply_flags.c">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="885">
+                        <state relative-caret-position="958">
                           <caret line="191" column="8" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
                         </state>
                       </provider>
@@ -251,7 +127,7 @@
                 <entry file="file://$PROJECT_DIR$/srcs/main.c">
                   <provider selected="true" editor-type-id="text-editor">
                     <state relative-caret-position="127">
-                      <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+                      <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
                     </state>
                   </provider>
                 </entry>
@@ -427,12 +303,12 @@
       <workItem from="1562957945717" duration="132000" />
       <workItem from="1562958165254" duration="4907000" />
       <workItem from="1563012230435" duration="5467000" />
-      <workItem from="1563540595886" duration="5989000" />
+      <workItem from="1563540595886" duration="6201000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142672000" />
+    <option name="totallyTimeSpent" value="142884000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2880" height="1517" extended-state="6" />
@@ -443,7 +319,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.11017544" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.11017544" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3817544" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,7 +329,7 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="CMake" order="11" weight="0.10526316" />
-      <window_info active="true" anchor="bottom" id="Messages" order="12" visible="true" weight="0.21473685" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.21473685" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -639,7 +515,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/apply_flags.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
+        <state relative-caret-position="958">
           <caret line="191" column="8" selection-start-line="191" selection-start-column="8" selection-end-line="191" selection-end-column="8" />
         </state>
       </provider>
@@ -649,13 +525,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/ft_f.c">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/srcs/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/srcs/ft_printf.c">
       <provider selected="true" editor-type-id="text-editor">
@@ -681,10 +550,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/srcs/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="16" column="19" lean-forward="true" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/srcs/ft_put_percent.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="498">
-          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        <state relative-caret-position="703">
+          <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
         </state>
       </provider>
     </entry>
