@@ -110,4 +110,16 @@ add_executable(ft_printf
         srcs/t_str.c
         srcs/wzrs.c
         srcs/zrs.c
-        main.c)
+        srcs/main.c
+        srcs/chck_b.c
+        srcs/chck_c.c
+        srcs/chck_di.c
+        srcs/chck_e.c
+        srcs/chck_f.c
+        srcs/chck_g.c
+        srcs/chck_o.c
+        srcs/chck_p.c
+        srcs/chck_sr.c
+        srcs/chck_x.c
+        srcs/chck_xu.c
+        srcs/ft_put_percent.c)

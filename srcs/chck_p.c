@@ -1,22 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_d.c                                             :+:      :+:    :+:   */
+/*   chck_p.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shunt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/03 22:49:41 by shunt             #+#    #+#             */
-/*   Updated: 2019/07/13 22:32:51 by shunt            ###   ########.fr       */
+/*   Created: 2019/07/13 00:16:00 by shunt             #+#    #+#             */
+/*   Updated: 2019/07/13 22:07:01 by shunt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char	*ft_d(int n)
+void	chck_p(t_rd **read, va_list **ap)
 {
-	char	*s;
-
-	if (!(s = s_itoa(n)))
-		return (NULL);
-	return (s);
+	(*read)->mod_smb = 'p';
+	(*read)->mod = ft_p(va_arg(**ap, unsigned long long));
 }

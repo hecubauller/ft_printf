@@ -282,9 +282,6 @@
 		<Unit filename="/Users/huller/Desktop/ft_printf/libft/sources/get_next_line.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/huller/Desktop/ft_printf/main.c">
-			<Option target="ft_printf"/>
-		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/add_z.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -292,6 +289,39 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/c_str.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_b.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_c.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_di.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_e.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_f.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_g.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_o.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_p.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_sr.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_x.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/chck_xu.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/e_zrs.c">
@@ -336,6 +366,9 @@
 		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/ft_printf.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/ft_put_percent.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/ft_rg.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -343,6 +376,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/int_p.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/main.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/huller/Desktop/ft_printf/srcs/mantis.c">

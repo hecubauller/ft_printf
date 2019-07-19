@@ -1357,18 +1357,174 @@ CMakeFiles/ft_printf.dir/srcs/zrs.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/zrs.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/zrs.c -o CMakeFiles/ft_printf.dir/srcs/zrs.c.s
 
-CMakeFiles/ft_printf.dir/main.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/ft_printf.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/main.c.o   -c /Users/huller/Desktop/ft_printf/main.c
+CMakeFiles/ft_printf.dir/srcs/main.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/main.c.o: ../srcs/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building C object CMakeFiles/ft_printf.dir/srcs/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/main.c.o   -c /Users/huller/Desktop/ft_printf/srcs/main.c
 
-CMakeFiles/ft_printf.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/main.c > CMakeFiles/ft_printf.dir/main.c.i
+CMakeFiles/ft_printf.dir/srcs/main.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/main.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/main.c > CMakeFiles/ft_printf.dir/srcs/main.c.i
 
-CMakeFiles/ft_printf.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/main.c -o CMakeFiles/ft_printf.dir/main.c.s
+CMakeFiles/ft_printf.dir/srcs/main.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/main.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/main.c -o CMakeFiles/ft_printf.dir/srcs/main.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_b.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_b.c.o: ../srcs/chck_b.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_b.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_b.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_b.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_b.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_b.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_b.c > CMakeFiles/ft_printf.dir/srcs/chck_b.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_b.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_b.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_b.c -o CMakeFiles/ft_printf.dir/srcs/chck_b.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_c.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_c.c.o: ../srcs/chck_c.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_c.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_c.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_c.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_c.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_c.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_c.c > CMakeFiles/ft_printf.dir/srcs/chck_c.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_c.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_c.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_c.c -o CMakeFiles/ft_printf.dir/srcs/chck_c.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_di.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_di.c.o: ../srcs/chck_di.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_di.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_di.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_di.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_di.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_di.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_di.c > CMakeFiles/ft_printf.dir/srcs/chck_di.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_di.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_di.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_di.c -o CMakeFiles/ft_printf.dir/srcs/chck_di.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_e.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_e.c.o: ../srcs/chck_e.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_e.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_e.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_e.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_e.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_e.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_e.c > CMakeFiles/ft_printf.dir/srcs/chck_e.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_e.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_e.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_e.c -o CMakeFiles/ft_printf.dir/srcs/chck_e.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_f.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_f.c.o: ../srcs/chck_f.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_f.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_f.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_f.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_f.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_f.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_f.c > CMakeFiles/ft_printf.dir/srcs/chck_f.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_f.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_f.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_f.c -o CMakeFiles/ft_printf.dir/srcs/chck_f.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_g.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_g.c.o: ../srcs/chck_g.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_g.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_g.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_g.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_g.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_g.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_g.c > CMakeFiles/ft_printf.dir/srcs/chck_g.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_g.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_g.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_g.c -o CMakeFiles/ft_printf.dir/srcs/chck_g.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_o.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_o.c.o: ../srcs/chck_o.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_o.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_o.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_o.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_o.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_o.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_o.c > CMakeFiles/ft_printf.dir/srcs/chck_o.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_o.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_o.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_o.c -o CMakeFiles/ft_printf.dir/srcs/chck_o.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_p.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_p.c.o: ../srcs/chck_p.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_p.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_p.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_p.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_p.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_p.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_p.c > CMakeFiles/ft_printf.dir/srcs/chck_p.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_p.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_p.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_p.c -o CMakeFiles/ft_printf.dir/srcs/chck_p.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o: ../srcs/chck_sr.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_sr.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_sr.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_sr.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_sr.c > CMakeFiles/ft_printf.dir/srcs/chck_sr.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_sr.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_sr.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_sr.c -o CMakeFiles/ft_printf.dir/srcs/chck_sr.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_x.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_x.c.o: ../srcs/chck_x.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_x.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_x.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_x.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_x.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_x.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_x.c > CMakeFiles/ft_printf.dir/srcs/chck_x.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_x.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_x.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_x.c -o CMakeFiles/ft_printf.dir/srcs/chck_x.c.s
+
+CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o: ../srcs/chck_xu.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o   -c /Users/huller/Desktop/ft_printf/srcs/chck_xu.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_xu.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/chck_xu.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/chck_xu.c > CMakeFiles/ft_printf.dir/srcs/chck_xu.c.i
+
+CMakeFiles/ft_printf.dir/srcs/chck_xu.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/chck_xu.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/chck_xu.c -o CMakeFiles/ft_printf.dir/srcs/chck_xu.c.s
+
+CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o: ../srcs/ft_put_percent.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o   -c /Users/huller/Desktop/ft_printf/srcs/ft_put_percent.c
+
+CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/huller/Desktop/ft_printf/srcs/ft_put_percent.c > CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.i
+
+CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/huller/Desktop/ft_printf/srcs/ft_put_percent.c -o CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.s
 
 # Object files for target ft_printf
 ft_printf_OBJECTS = \
@@ -1472,7 +1628,19 @@ ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/srcs/t_str.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/wzrs.c.o" \
 "CMakeFiles/ft_printf.dir/srcs/zrs.c.o" \
-"CMakeFiles/ft_printf.dir/main.c.o"
+"CMakeFiles/ft_printf.dir/srcs/main.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_b.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_c.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_di.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_e.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_f.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_g.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_o.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_p.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_x.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o" \
+"CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o"
 
 # External object files for target ft_printf
 ft_printf_EXTERNAL_OBJECTS =
@@ -1577,10 +1745,22 @@ ft_printf: CMakeFiles/ft_printf.dir/srcs/str_ml.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/t_str.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/wzrs.c.o
 ft_printf: CMakeFiles/ft_printf.dir/srcs/zrs.c.o
-ft_printf: CMakeFiles/ft_printf.dir/main.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/main.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_b.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_c.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_di.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_e.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_f.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_g.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_o.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_p.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_x.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o
+ft_printf: CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o
 ft_printf: CMakeFiles/ft_printf.dir/build.make
 ft_printf: CMakeFiles/ft_printf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Linking C executable ft_printf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/huller/Desktop/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Linking C executable ft_printf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_printf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -154,7 +154,7 @@ int    ft_app_fl(t_rd **read)
 	b = 0;
 	if ((*read)->mod)
 	{
-		if ((*read)->flag == 2 && (*read)->mod[0] != '-') /* For Positive nbr */
+		if ((*read)->flag == 2 && (*read)->mod[0] != '-')
 		{
 			strlen = ft_strlen((*read)->mod);
 			if (!(res = (char *)malloc(sizeof(char) * (strlen + 2))))
@@ -188,8 +188,8 @@ int    ft_app_fl(t_rd **read)
 		}
 //	вместо знака у положит чисел (если есть ширина, то не выводится)
 //		;
-//	if ((*read)->flag == 8) ##########
-//		;
+	if ((*read)->flag == 8) /* '#' */
+		;
 	}
 	return (SUCCESS);
 }

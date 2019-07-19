@@ -1824,33 +1824,6 @@ libft/sources/get_next_line.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/sources/get_next_line.c.s
 .PHONY : libft/sources/get_next_line.c.s
 
-main.o: main.c.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.o
-.PHONY : main.c.o
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/main.c.s
-.PHONY : main.c.s
-
 srcs/add_z.o: srcs/add_z.c.o
 
 .PHONY : srcs/add_z.o
@@ -1931,6 +1904,303 @@ srcs/c_str.s: srcs/c_str.c.s
 srcs/c_str.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/c_str.c.s
 .PHONY : srcs/c_str.c.s
+
+srcs/chck_b.o: srcs/chck_b.c.o
+
+.PHONY : srcs/chck_b.o
+
+# target to build an object file
+srcs/chck_b.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_b.c.o
+.PHONY : srcs/chck_b.c.o
+
+srcs/chck_b.i: srcs/chck_b.c.i
+
+.PHONY : srcs/chck_b.i
+
+# target to preprocess a source file
+srcs/chck_b.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_b.c.i
+.PHONY : srcs/chck_b.c.i
+
+srcs/chck_b.s: srcs/chck_b.c.s
+
+.PHONY : srcs/chck_b.s
+
+# target to generate assembly for a file
+srcs/chck_b.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_b.c.s
+.PHONY : srcs/chck_b.c.s
+
+srcs/chck_c.o: srcs/chck_c.c.o
+
+.PHONY : srcs/chck_c.o
+
+# target to build an object file
+srcs/chck_c.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_c.c.o
+.PHONY : srcs/chck_c.c.o
+
+srcs/chck_c.i: srcs/chck_c.c.i
+
+.PHONY : srcs/chck_c.i
+
+# target to preprocess a source file
+srcs/chck_c.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_c.c.i
+.PHONY : srcs/chck_c.c.i
+
+srcs/chck_c.s: srcs/chck_c.c.s
+
+.PHONY : srcs/chck_c.s
+
+# target to generate assembly for a file
+srcs/chck_c.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_c.c.s
+.PHONY : srcs/chck_c.c.s
+
+srcs/chck_di.o: srcs/chck_di.c.o
+
+.PHONY : srcs/chck_di.o
+
+# target to build an object file
+srcs/chck_di.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_di.c.o
+.PHONY : srcs/chck_di.c.o
+
+srcs/chck_di.i: srcs/chck_di.c.i
+
+.PHONY : srcs/chck_di.i
+
+# target to preprocess a source file
+srcs/chck_di.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_di.c.i
+.PHONY : srcs/chck_di.c.i
+
+srcs/chck_di.s: srcs/chck_di.c.s
+
+.PHONY : srcs/chck_di.s
+
+# target to generate assembly for a file
+srcs/chck_di.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_di.c.s
+.PHONY : srcs/chck_di.c.s
+
+srcs/chck_e.o: srcs/chck_e.c.o
+
+.PHONY : srcs/chck_e.o
+
+# target to build an object file
+srcs/chck_e.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_e.c.o
+.PHONY : srcs/chck_e.c.o
+
+srcs/chck_e.i: srcs/chck_e.c.i
+
+.PHONY : srcs/chck_e.i
+
+# target to preprocess a source file
+srcs/chck_e.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_e.c.i
+.PHONY : srcs/chck_e.c.i
+
+srcs/chck_e.s: srcs/chck_e.c.s
+
+.PHONY : srcs/chck_e.s
+
+# target to generate assembly for a file
+srcs/chck_e.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_e.c.s
+.PHONY : srcs/chck_e.c.s
+
+srcs/chck_f.o: srcs/chck_f.c.o
+
+.PHONY : srcs/chck_f.o
+
+# target to build an object file
+srcs/chck_f.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_f.c.o
+.PHONY : srcs/chck_f.c.o
+
+srcs/chck_f.i: srcs/chck_f.c.i
+
+.PHONY : srcs/chck_f.i
+
+# target to preprocess a source file
+srcs/chck_f.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_f.c.i
+.PHONY : srcs/chck_f.c.i
+
+srcs/chck_f.s: srcs/chck_f.c.s
+
+.PHONY : srcs/chck_f.s
+
+# target to generate assembly for a file
+srcs/chck_f.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_f.c.s
+.PHONY : srcs/chck_f.c.s
+
+srcs/chck_g.o: srcs/chck_g.c.o
+
+.PHONY : srcs/chck_g.o
+
+# target to build an object file
+srcs/chck_g.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_g.c.o
+.PHONY : srcs/chck_g.c.o
+
+srcs/chck_g.i: srcs/chck_g.c.i
+
+.PHONY : srcs/chck_g.i
+
+# target to preprocess a source file
+srcs/chck_g.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_g.c.i
+.PHONY : srcs/chck_g.c.i
+
+srcs/chck_g.s: srcs/chck_g.c.s
+
+.PHONY : srcs/chck_g.s
+
+# target to generate assembly for a file
+srcs/chck_g.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_g.c.s
+.PHONY : srcs/chck_g.c.s
+
+srcs/chck_o.o: srcs/chck_o.c.o
+
+.PHONY : srcs/chck_o.o
+
+# target to build an object file
+srcs/chck_o.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_o.c.o
+.PHONY : srcs/chck_o.c.o
+
+srcs/chck_o.i: srcs/chck_o.c.i
+
+.PHONY : srcs/chck_o.i
+
+# target to preprocess a source file
+srcs/chck_o.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_o.c.i
+.PHONY : srcs/chck_o.c.i
+
+srcs/chck_o.s: srcs/chck_o.c.s
+
+.PHONY : srcs/chck_o.s
+
+# target to generate assembly for a file
+srcs/chck_o.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_o.c.s
+.PHONY : srcs/chck_o.c.s
+
+srcs/chck_p.o: srcs/chck_p.c.o
+
+.PHONY : srcs/chck_p.o
+
+# target to build an object file
+srcs/chck_p.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_p.c.o
+.PHONY : srcs/chck_p.c.o
+
+srcs/chck_p.i: srcs/chck_p.c.i
+
+.PHONY : srcs/chck_p.i
+
+# target to preprocess a source file
+srcs/chck_p.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_p.c.i
+.PHONY : srcs/chck_p.c.i
+
+srcs/chck_p.s: srcs/chck_p.c.s
+
+.PHONY : srcs/chck_p.s
+
+# target to generate assembly for a file
+srcs/chck_p.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_p.c.s
+.PHONY : srcs/chck_p.c.s
+
+srcs/chck_sr.o: srcs/chck_sr.c.o
+
+.PHONY : srcs/chck_sr.o
+
+# target to build an object file
+srcs/chck_sr.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o
+.PHONY : srcs/chck_sr.c.o
+
+srcs/chck_sr.i: srcs/chck_sr.c.i
+
+.PHONY : srcs/chck_sr.i
+
+# target to preprocess a source file
+srcs/chck_sr.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_sr.c.i
+.PHONY : srcs/chck_sr.c.i
+
+srcs/chck_sr.s: srcs/chck_sr.c.s
+
+.PHONY : srcs/chck_sr.s
+
+# target to generate assembly for a file
+srcs/chck_sr.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_sr.c.s
+.PHONY : srcs/chck_sr.c.s
+
+srcs/chck_x.o: srcs/chck_x.c.o
+
+.PHONY : srcs/chck_x.o
+
+# target to build an object file
+srcs/chck_x.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_x.c.o
+.PHONY : srcs/chck_x.c.o
+
+srcs/chck_x.i: srcs/chck_x.c.i
+
+.PHONY : srcs/chck_x.i
+
+# target to preprocess a source file
+srcs/chck_x.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_x.c.i
+.PHONY : srcs/chck_x.c.i
+
+srcs/chck_x.s: srcs/chck_x.c.s
+
+.PHONY : srcs/chck_x.s
+
+# target to generate assembly for a file
+srcs/chck_x.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_x.c.s
+.PHONY : srcs/chck_x.c.s
+
+srcs/chck_xu.o: srcs/chck_xu.c.o
+
+.PHONY : srcs/chck_xu.o
+
+# target to build an object file
+srcs/chck_xu.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o
+.PHONY : srcs/chck_xu.c.o
+
+srcs/chck_xu.i: srcs/chck_xu.c.i
+
+.PHONY : srcs/chck_xu.i
+
+# target to preprocess a source file
+srcs/chck_xu.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_xu.c.i
+.PHONY : srcs/chck_xu.c.i
+
+srcs/chck_xu.s: srcs/chck_xu.c.s
+
+.PHONY : srcs/chck_xu.s
+
+# target to generate assembly for a file
+srcs/chck_xu.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/chck_xu.c.s
+.PHONY : srcs/chck_xu.c.s
 
 srcs/e_zrs.o: srcs/e_zrs.c.o
 
@@ -2310,6 +2580,33 @@ srcs/ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_printf.c.s
 .PHONY : srcs/ft_printf.c.s
 
+srcs/ft_put_percent.o: srcs/ft_put_percent.c.o
+
+.PHONY : srcs/ft_put_percent.o
+
+# target to build an object file
+srcs/ft_put_percent.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o
+.PHONY : srcs/ft_put_percent.c.o
+
+srcs/ft_put_percent.i: srcs/ft_put_percent.c.i
+
+.PHONY : srcs/ft_put_percent.i
+
+# target to preprocess a source file
+srcs/ft_put_percent.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.i
+.PHONY : srcs/ft_put_percent.c.i
+
+srcs/ft_put_percent.s: srcs/ft_put_percent.c.s
+
+.PHONY : srcs/ft_put_percent.s
+
+# target to generate assembly for a file
+srcs/ft_put_percent.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.s
+.PHONY : srcs/ft_put_percent.c.s
+
 srcs/ft_rg.o: srcs/ft_rg.c.o
 
 .PHONY : srcs/ft_rg.o
@@ -2390,6 +2687,33 @@ srcs/int_p.s: srcs/int_p.c.s
 srcs/int_p.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/int_p.c.s
 .PHONY : srcs/int_p.c.s
+
+srcs/main.o: srcs/main.c.o
+
+.PHONY : srcs/main.o
+
+# target to build an object file
+srcs/main.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/main.c.o
+.PHONY : srcs/main.c.o
+
+srcs/main.i: srcs/main.c.i
+
+.PHONY : srcs/main.i
+
+# target to preprocess a source file
+srcs/main.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/main.c.i
+.PHONY : srcs/main.c.i
+
+srcs/main.s: srcs/main.c.s
+
+.PHONY : srcs/main.s
+
+# target to generate assembly for a file
+srcs/main.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/srcs/main.c.s
+.PHONY : srcs/main.c.s
 
 srcs/mantis.o: srcs/mantis.c.o
 
@@ -3048,9 +3372,6 @@ help:
 	@echo "... libft/sources/get_next_line.o"
 	@echo "... libft/sources/get_next_line.i"
 	@echo "... libft/sources/get_next_line.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... srcs/add_z.o"
 	@echo "... srcs/add_z.i"
 	@echo "... srcs/add_z.s"
@@ -3060,6 +3381,39 @@ help:
 	@echo "... srcs/c_str.o"
 	@echo "... srcs/c_str.i"
 	@echo "... srcs/c_str.s"
+	@echo "... srcs/chck_b.o"
+	@echo "... srcs/chck_b.i"
+	@echo "... srcs/chck_b.s"
+	@echo "... srcs/chck_c.o"
+	@echo "... srcs/chck_c.i"
+	@echo "... srcs/chck_c.s"
+	@echo "... srcs/chck_di.o"
+	@echo "... srcs/chck_di.i"
+	@echo "... srcs/chck_di.s"
+	@echo "... srcs/chck_e.o"
+	@echo "... srcs/chck_e.i"
+	@echo "... srcs/chck_e.s"
+	@echo "... srcs/chck_f.o"
+	@echo "... srcs/chck_f.i"
+	@echo "... srcs/chck_f.s"
+	@echo "... srcs/chck_g.o"
+	@echo "... srcs/chck_g.i"
+	@echo "... srcs/chck_g.s"
+	@echo "... srcs/chck_o.o"
+	@echo "... srcs/chck_o.i"
+	@echo "... srcs/chck_o.s"
+	@echo "... srcs/chck_p.o"
+	@echo "... srcs/chck_p.i"
+	@echo "... srcs/chck_p.s"
+	@echo "... srcs/chck_sr.o"
+	@echo "... srcs/chck_sr.i"
+	@echo "... srcs/chck_sr.s"
+	@echo "... srcs/chck_x.o"
+	@echo "... srcs/chck_x.i"
+	@echo "... srcs/chck_x.s"
+	@echo "... srcs/chck_xu.o"
+	@echo "... srcs/chck_xu.i"
+	@echo "... srcs/chck_xu.s"
 	@echo "... srcs/e_zrs.o"
 	@echo "... srcs/e_zrs.i"
 	@echo "... srcs/e_zrs.s"
@@ -3102,6 +3456,9 @@ help:
 	@echo "... srcs/ft_printf.o"
 	@echo "... srcs/ft_printf.i"
 	@echo "... srcs/ft_printf.s"
+	@echo "... srcs/ft_put_percent.o"
+	@echo "... srcs/ft_put_percent.i"
+	@echo "... srcs/ft_put_percent.s"
 	@echo "... srcs/ft_rg.o"
 	@echo "... srcs/ft_rg.i"
 	@echo "... srcs/ft_rg.s"
@@ -3111,6 +3468,9 @@ help:
 	@echo "... srcs/int_p.o"
 	@echo "... srcs/int_p.i"
 	@echo "... srcs/int_p.s"
+	@echo "... srcs/main.o"
+	@echo "... srcs/main.i"
+	@echo "... srcs/main.s"
 	@echo "... srcs/mantis.o"
 	@echo "... srcs/mantis.i"
 	@echo "... srcs/mantis.s"

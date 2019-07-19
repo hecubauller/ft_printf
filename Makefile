@@ -31,7 +31,9 @@ SRC_NAME        =   ft_itoa_fp.c mexp.c str_ad.c e_zrs.c ft_ox.c pw.c str_ml.c\
 	fld_edge.c ft_p.c pw_to_str.c t_str.c fr_p.c ft_printf.c reader.c wzrs.c\
 	ft_c.c res_o_fr.c zrs.c ft_e.c ft_round.c rnd.c add_z.c ft_f.c int_p.c\
 	rnd_z.c apply_flags.c ft_fld.c rndg.c ft_g.c rndg_z.c c_str.c mantis.c\
-	ft_itoa_base.c s_str.c ft_d.c ft_rg.c res_w_fr.c\
+	ft_itoa_base.c s_str.c ft_rg.c res_w_fr.c ft_put_percent.c chck_xu.c\
+	ft_d.c chck_x.c chck_sr.c chck_p.c chck_o.c chck_g.c chck_f.c chck_e.c\
+	chck_di.c chck_c.c chck_b.c\
 
 OBJ_NAME        =   $(SRC_NAME:.c=.o)
 INC_NAME        =   ft_printf.h

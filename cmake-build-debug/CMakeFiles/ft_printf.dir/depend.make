@@ -191,10 +191,6 @@ CMakeFiles/ft_printf.dir/libft/sources/get_next_line.c.o: ../libft/includes/get_
 CMakeFiles/ft_printf.dir/libft/sources/get_next_line.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/libft/sources/get_next_line.c.o: ../libft/sources/get_next_line.c
 
-CMakeFiles/ft_printf.dir/main.c.o: ../includes/ft_printf.h
-CMakeFiles/ft_printf.dir/main.c.o: ../libft/includes/libft.h
-CMakeFiles/ft_printf.dir/main.c.o: ../main.c
-
 CMakeFiles/ft_printf.dir/srcs/add_z.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/add_z.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/srcs/add_z.c.o: ../srcs/add_z.c
@@ -206,6 +202,50 @@ CMakeFiles/ft_printf.dir/srcs/apply_flags.c.o: ../srcs/apply_flags.c
 CMakeFiles/ft_printf.dir/srcs/c_str.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/c_str.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/srcs/c_str.c.o: ../srcs/c_str.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_b.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_b.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_b.c.o: ../srcs/chck_b.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_c.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_c.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_c.c.o: ../srcs/chck_c.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_di.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_di.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_di.c.o: ../srcs/chck_di.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_e.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_e.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_e.c.o: ../srcs/chck_e.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_f.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_f.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_f.c.o: ../srcs/chck_f.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_g.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_g.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_g.c.o: ../srcs/chck_g.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_o.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_o.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_o.c.o: ../srcs/chck_o.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_p.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_p.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_p.c.o: ../srcs/chck_p.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_sr.c.o: ../srcs/chck_sr.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_x.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_x.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_x.c.o: ../srcs/chck_x.c
+
+CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/chck_xu.c.o: ../srcs/chck_xu.c
 
 CMakeFiles/ft_printf.dir/srcs/e_zrs.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/e_zrs.c.o: ../libft/includes/libft.h
@@ -263,6 +303,10 @@ CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/srcs/ft_printf.c.o: ../srcs/ft_printf.c
 
+CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/ft_put_percent.c.o: ../srcs/ft_put_percent.c
+
 CMakeFiles/ft_printf.dir/srcs/ft_rg.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/ft_rg.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/srcs/ft_rg.c.o: ../srcs/ft_rg.c
@@ -274,6 +318,10 @@ CMakeFiles/ft_printf.dir/srcs/ft_round.c.o: ../srcs/ft_round.c
 CMakeFiles/ft_printf.dir/srcs/int_p.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/int_p.c.o: ../libft/includes/libft.h
 CMakeFiles/ft_printf.dir/srcs/int_p.c.o: ../srcs/int_p.c
+
+CMakeFiles/ft_printf.dir/srcs/main.c.o: ../includes/ft_printf.h
+CMakeFiles/ft_printf.dir/srcs/main.c.o: ../libft/includes/libft.h
+CMakeFiles/ft_printf.dir/srcs/main.c.o: ../srcs/main.c
 
 CMakeFiles/ft_printf.dir/srcs/mantis.c.o: ../includes/ft_printf.h
 CMakeFiles/ft_printf.dir/srcs/mantis.c.o: ../libft/includes/libft.h
