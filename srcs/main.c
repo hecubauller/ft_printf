@@ -14,10 +14,7 @@
 
 int		main()
 {
-	printf("% Z", "test");
-	printf("\n");
-	ft_printf("% Z", "test");
-
-
+	printf("%#X\n", 12);
+	printf("%#X\n", 12);
 	return (0);
 }
