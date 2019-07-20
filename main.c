@@ -14,8 +14,8 @@
 
 int		main()
 {
-    int a = printf("%s\n", "abs");
-	int b = ft_printf("%s\n", "abs");
+    int a = printf("111%s333\n", "222");
+	int b = ft_printf("111%s333\n", "222");
     printf("%d, %d\n", a, b);
 	return (0);
 }
