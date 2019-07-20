@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-char    *ft_g(long double g, int a, int b)
+char    *ft_g(long double g, int a, int b, unsigned short int c)
 {
     char    *f;
     char    *e;
@@ -27,11 +27,11 @@ char    *ft_g(long double g, int a, int b)
     if (b < i)
     {
         free(f);
-        return (ft_rg(e, b));
+        return (ft_rg(e, b, c));
     }
     else
     {
         free(e);
-        return (ft_rg(f, b));
+        return (ft_rg(f, b, c));
     }
 }

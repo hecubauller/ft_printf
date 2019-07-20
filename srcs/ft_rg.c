@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-char    *ft_rg(char *s, int a)
+char    *ft_rg(char *s, int a, unsigned short int d)
 {
     int     i;
     int     k;
@@ -20,7 +20,7 @@ char    *ft_rg(char *s, int a)
     char    *c;
 
     c = NULL;
-    k = strlen(s);
+    k = ft_strlen(s);
     i = t_str(s, &t);
     if (k != i)
         c_str(s, &c, i, k);
@@ -30,8 +30,8 @@ char    *ft_rg(char *s, int a)
         if (t[i] >= '0' && t[i] <= '9')
             ++k;
     if (t[i])
-        t[i] == '.' ? rndg_z(t, i) : rndg(t, i);
-    wzrs(&t);
+        t[i] == '.' ? rndg_z(t, i, d) : rndg(t, i);
+    d != 8 ? wzrs(&t) : 0;
     s_str(&s, &t, &c);
     return (s);
 }

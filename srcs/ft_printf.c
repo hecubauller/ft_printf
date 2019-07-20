@@ -58,7 +58,7 @@ int ft_pt_frst(const char *format, t_out *output, t_rd **rd)
 	(*output).buf = ft_strjoin((*output).buf, res);
 	free((void *)res);
 	tmp2 ? free((void *)tmp2) : 0;
-	format[(*rd)->smb_cnt] == '\0' ? (*rd)->smb_cnt-- : 0;
+	//format[(*rd)->smb_cnt] == '\0' ? (*rd)->smb_cnt-- : 0;
 	return (SUCCESS);
 }
 
@@ -67,7 +67,7 @@ void ft_reader(t_rd **read, va_list *ap, const char *format, t_out *out)
 	ft_chck_flags(read, format);
 	ft_chck_wdth(read, format, &ap);
 	ft_chck_precision(read, format, &ap);
-	ft_chck_size(read, format, &ap);
+	ft_chck_size(read, format/*, &ap*/);
 	ft_chck_mod(read, format, &ap, out);
 	if (((*read)->mod_smb == 'd' || (*read)->mod_smb == 'i') &&
 		(*read)->prs == 6 && (*read)->kostil != 1)

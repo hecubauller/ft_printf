@@ -12,13 +12,18 @@
 
 #include "ft_printf.h"
 
-void    rndg_z(char *s, int i)
+void    rndg_z(char *s, int i, unsigned short int c)
 {
     char    *t;
     int     l;
 
     if (s[i + 1] < '5' || (s[i + 1] == '5' && !(s[i - 1] % 2)))
-        s[i + 1] = '\0';
+    {
+        if (c == 8)
+            s[i + 1] = '\0';
+        else
+            s[i] = '\0';
+    }
     else if (s[i + 1] > '5' ||
              (s[i + 1] == '5' && s[i - 1] % 2))
     {

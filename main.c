@@ -6,17 +6,16 @@
 /*   By: shunt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/03 03:41:03 by shunt             #+#    #+#             */
-/*   Updated: 2019/07/12 23:39:46 by huller           ###   ########.fr       */
+/*   Updated: 2019/07/20 22:57:44 by huller           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "includes/ft_printf.h"
 
 int		main()
 {
-    printf("%g\n", 1.);
-    printf("%#g\n", 1.);
-    ft_printf("%g\n", 1.);
-	ft_printf("%#g\n", 1.);
+    int a = printf("%s\n", "abs");
+	int b = ft_printf("%s\n", "abs");
+    printf("%d, %d\n", a, b);
 	return (0);
 }
