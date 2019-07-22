@@ -1,41 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_round.c                                         :+:      :+:    :+:   */
+/*   ft_s.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shunt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/20 00:07:30 by shunt             #+#    #+#             */
-/*   Updated: 2019/06/20 00:07:33 by shunt            ###   ########.fr       */
+/*   Created: 2019/07/21 22:39:49 by shunt             #+#    #+#             */
+/*   Updated: 2019/07/21 22:39:51 by shunt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char    *ft_round(char *s, size_t a)
+char    *ft_s(char *s)
 {
-    int     i;
-    int     k;
-    char    *t;
-    char    *c;
+    char    *r;
 
-    c = NULL;
-    k = strlen(s);
-    i = t_str(s, &t);
-    if (k != i)
-        c_str(s, &c, i, k);
-    if (t[i - 1] != '.')
+    if (s)
     {
-        k = i;
-        while (t[--i] != '.')
-            ;
-        if (k - i - 1 < a)
-            zrs(t, a, i);
-        else
-            a ? rnd(t, a, i) : rnd_z(t, i);
+        if (!(r = ft_strdup(s)))
+            return (NULL);
     }
     else
-        e_zrs(t, a, i);
-    s_str(&s, &t, &c);
-    return (s);
+    {
+        if (!(r = (char *)malloc(sizeof(char) * 7)))
+            return (NULL);
+        r[0] = '(';
+        r[1] = 'n';
+        r[2] = 'u';
+        r[3] = 'l';
+        r[4] = 'l';
+        r[5] = ')';
+        r[6] = '\0';
+    }
+    return (r);
 }

@@ -22,8 +22,10 @@ static void	ft_k(t_rd **read, const char *format, va_list **ap, t_out *out)
 		chck_x(read, ap);
 	else if (format[(*read)->smb_cnt] == 'X')
 		chck_xu(read, ap);
-	else if (format[(*read)->smb_cnt] == 'c')
+	else if (format[(*read)->smb_cnt] == 'c' || format[(*read)->smb_cnt] == 'C')
 		chck_c(read, ap);
+	else if (format[(*read)->smb_cnt] == 'u')
+	    chck_u(read, ap);
 	else
 		chck_nthng(format, out, read);
 }
@@ -32,7 +34,7 @@ void		ft_chck_mod(t_rd **read, const char *format, va_list **ap, t_out *out)
 {
 	(*read)->mod = NULL;
 	(*read)->mod2 = NULL;
-    if ((*read)->flag == 8 || format[(*read)->smb_cnt] == '*')
+    if (format[(*read)->smb_cnt] == '*')
         (*read)->smb_cnt++;
 	if (format[(*read)->smb_cnt] == 's' || format[(*read)->smb_cnt] == 'r')
 		format[(*read)->smb_cnt] == 's' ? chck_sr(read, ap, 1) :
@@ -62,12 +64,14 @@ void    ft_chck_size(t_rd **read, const char *format/*, va_list **ap*/)
 	{
 //		if (format[(*read)->smb_cnt] == '*')
 //			(*read)->size = va_arg(**ap, int);
-		if (format[(*read)->smb_cnt] == 'l')
+		if (format[(*read)->smb_cnt] == 'l' &&
+            format[(*read)->smb_cnt + 1] != 'l')
 			(*read)->size |= LONG_INT;
 		else if (format[(*read)->smb_cnt] == 'l' &&
 		         format[(*read)->smb_cnt + 1] == 'l')
 			(*read)->size |= LONG_LONG_INT;
-		else if (format[(*read)->smb_cnt] == 'h')
+		else if (format[(*read)->smb_cnt] == 'h' &&
+                 format[(*read)->smb_cnt + 1] != 'h')
 			(*read)->size |= SHORT_INT;
 		else if (format[(*read)->smb_cnt] == 'h' &&
 		         format[(*read)->smb_cnt + 1] == 'h')
@@ -80,6 +84,10 @@ void    ft_chck_size(t_rd **read, const char *format/*, va_list **ap*/)
 			(*read)->size |= PTRDIFF_T;
 		else if (format[(*read)->smb_cnt] == 'L')
 			(*read)->size |= INT_64;
+        if ((*read)->size == 2 || (*read)->size == 8)
+            (*read)->smb_cnt += 2;
+        else if ((*read)->size)
+            ++(*read)->smb_cnt;
 	}
 }
 
@@ -122,8 +130,6 @@ void    ft_chck_wdth(t_rd **read, const char *format, va_list **ap)
 		r = 0;
 		if (format[(*read)->smb_cnt] == '*')
 			r = va_arg(**ap, int);
-		if (format[(*read)->smb_cnt - 1] == '#')
-			(*read)->smb_cnt++;
 		while (format[(*read)->smb_cnt] != '.' &&
 		       (format[(*read)->smb_cnt] >= '0'
 		        && format[(*read)->smb_cnt] <= '9'))
@@ -148,17 +154,18 @@ void    ft_chck_flags(t_rd **read, const char *format)
 		    while ((format[++(*read)->smb_cnt] == '-' ||
 		            format[(*read)->smb_cnt] == '+' ||
 		            format[(*read)->smb_cnt] == ' ' ||
-		            format[(*read)->smb_cnt] == '0'));
-		    if (format[(*read)->smb_cnt - 1] == '+')
+		            format[(*read)->smb_cnt] == '0' ||
+		            format[(*read)->smb_cnt] == '#'))
+		    	if (format[(*read)->smb_cnt] == '+')
 			    (*read)->flag |= F_PLUS;
-		    else if (format[(*read)->smb_cnt - 1] == '-')
+		        else if (format[(*read)->smb_cnt] == '-')
 			    (*read)->flag |= F_MINUS;
-		    else if (format[(*read)->smb_cnt - 1] == ' ')
+		        else if (format[(*read)->smb_cnt] == ' ')
 			    (*read)->flag |= F_SPACE;
-		    else if (format[(*read)->smb_cnt - 1] == '0')
+		        else if (format[(*read)->smb_cnt] == '0')
 			    (*read)->flag |= F_ZERO;
-		    else if (format[(*read)->smb_cnt] == '#')
-			    (*read)->flag |= F_OCT;
+		        else if (format[(*read)->smb_cnt] == '#')
+		    	(*read)->flag |= F_OCT;
 	    }
     }
 }

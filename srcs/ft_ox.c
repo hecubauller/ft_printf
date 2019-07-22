@@ -12,21 +12,28 @@
 
 #include "ft_printf.h"
 
-char    *ft_ox(u_int64_t o, int a, int b)
+char    *ft_ox(u_int64_t o, int a, int b, size_t prs)
 {
 	char *s;
 
-	if (a == 8) 
+    if (!o && !prs)
+    {
+        if (!(s = (char *)malloc(sizeof(char))))
+            return (NULL);
+        s[0] = '\0';
+        return (s);
+    }
+	if (a == 8)
 	{
-		if (!(s = u_itoa_base(o, 8, 1)))
-			return (NULL);
+	    if (!(s = u_itoa_base(o, 8, 1)))
+		    return (NULL);
 	}
 	else if (a == 16)
 	{
 		if (!(s = (b) ? u_itoa_base(o, 16, 1) : u_itoa_base(o, 16, 0)))
 			return (NULL);
 	}
-	//else if (a == 2)
+	else if (a == 2)
 		if (!(s = u_itoa_base(o, 2, 1)))
 			return (NULL);
 	return (s);

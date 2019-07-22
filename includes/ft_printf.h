@@ -36,6 +36,12 @@
 # define F_OCT           (1u << 3u)		/* '#' */  /*    8 */
 # define F_ZERO          (1u << 4u)		/* '0' */  /*   16 */
 
+# define IS_MIN         & F_MINUS       /* '-' */
+# define IS_PL          & F_PLUS        /* '+' */
+# define IS_SP          & F_SPACE       /* ' ' */
+# define IS_O           & F_OCT         /* '#' */
+# define IS_ZE          & F_ZERO        /* '0' */
+
 /*
 **  SIZE (MASKS)
 */
@@ -118,6 +124,7 @@ void		chck_p(t_rd **read, va_list **ap);
 void		chck_sr(t_rd **read, va_list **ap, int a);
 void		chck_x(t_rd **read, va_list **ap);
 void		chck_xu(t_rd **read, va_list **ap);
+void        chck_u(t_rd **read, va_list **ap);
 int         chck_nthng(const char *format, t_out *output, t_rd **rd);
 
 /*
@@ -149,13 +156,15 @@ void    ft_out_cnt(t_out *output);
 **  TYPES
 */
 
-char            *ft_d(int n);
-char            *ft_c(char c);
+char            *ft_d(int64_t n);
+char            *ft_u(u_int64_t n);
+char            *ft_c(wchar_t c, int a);
 char            *ft_e(long double e, int a);
-char            *ft_ox(u_int64_t o, int a, int b);
+char            *ft_ox(u_int64_t o, int a, int b, size_t prs);
 char            *ft_p(unsigned long long p);
 char            *ft_fld(long double f, int c);
-char            *ft_g(long double g, int a, int b, unsigned short int c);
+char            *ft_g(long double g, int a, size_t b, unsigned short int c);
+char            *ft_s(char *s);
 int             mexp(t_flts l);
 char            *mantis(t_flts l);
 long long       pw(long long n, int p);
@@ -168,7 +177,7 @@ char            *add_z(char *s, int z);
 char            *res_w_fr(int e, char *in, char *fr, int sign);
 char            *res_o_fr(char *in, int sign);
 char            *u_itoa_base(u_int64_t n, u_int64_t b, int c);
-char            *ft_round(char *s, int a);
+char            *ft_round(char *s, size_t a);
 void            rnd(char *s, int a, int i);
 void            zrs(char *s, int a, int i);
 void            e_zrs(char *s, int a, int i);
