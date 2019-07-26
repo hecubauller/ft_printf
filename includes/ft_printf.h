@@ -64,7 +64,7 @@ typedef struct			s_rd
 	wchar_t 			*mod2;
 	char				*mod;       /* String */
 	char				mod_smb;    /* Symbol of Format */
-	int                 sign;       /* Sign */
+//	int                 sign;       /* Sign */
 	unsigned short int	flag;       /* Flags */
 	unsigned short int	size;       /* Size of Output */
 	size_t      		smb_cnt;    /* Counter for Checking */
@@ -161,7 +161,7 @@ char            *ft_d(int64_t n);
 char            *ft_u(u_int64_t n);
 char            *ft_c(wchar_t c, int a);
 char            *ft_e(long double e, int a);
-char            *ft_ox(u_int64_t o, int a, int b, size_t prs);
+char            *ft_ox(u_int64_t o, int a, int b);
 char            *ft_p(unsigned long long p);
 char            *ft_fld(long double f, int c);
 char            *ft_g(long double g, int a, size_t b, unsigned short int c);
@@ -194,5 +194,6 @@ char            *ft_rg(char *s, int a, unsigned short int d);
 char            *s_itoa(int64_t n);
 char            *u_itoa(u_int64_t n);
 void            wzrs(char **t);
+char            *ft_ro(char **s, size_t prs, int l);
 
 #endif

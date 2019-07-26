@@ -250,9 +250,9 @@ int    ft_app_fl(t_rd **read)
 
 int    ft_solver(t_rd **read, t_out *output)
 {
-	(*read)->sign = 0; /* Positive Number */
-	if ((*read)->mod[0] == '-')
-		(*read)->sign = 1; /* Negative Number */
+//	(*read)->sign = 0; /* Positive Number */
+//	if ((*read)->mod[0] == '-')
+//		(*read)->sign = 1; /* Negative Number */
 	if (((*read)->mod_smb == 'd' || (*read)->mod_smb == 'i')
 	    && ((*read)->prs))
 	{
