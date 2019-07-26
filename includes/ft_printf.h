@@ -64,6 +64,7 @@ typedef struct			s_rd
 	wchar_t 			*mod2;
 	char				*mod;       /* String */
 	char				mod_smb;    /* Symbol of Format */
+	int                 sign;       /* Sign */
 	unsigned short int	flag;       /* Flags */
 	unsigned short int	size;       /* Size of Output */
 	size_t      		smb_cnt;    /* Counter for Checking */
@@ -112,7 +113,7 @@ void		ft_chck_size(t_rd **read, const char *format/*, va_list **ap*/);
 void		ft_chck_precision(t_rd **read, const char *format, va_list **ap);
 void		ft_chck_wdth(t_rd **read, const char *format, va_list **ap);
 void		ft_rd(t_rd **rd, va_list *ap, const char *ft, t_out **out);
-int         ft_put_percent(const char *format, t_out *output, t_rd **rd);
+int         ft_put_percent(t_rd **read);
 void		chck_b(t_rd **read, va_list **ap);
 void		chck_c(t_rd **read, va_list **ap);
 void		chck_di(t_rd **read, va_list **ap, int a);

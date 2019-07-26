@@ -186,8 +186,6 @@ int    ft_app_fl(t_rd **read)
 			(*read)->mod = res;
 			free((void *) tmp);
 		}
-//	вместо знака у положит чисел (если есть ширина, то не выводится)
-//		;
 		if ((*read)->flag IS_O) /* '#' */
 		{
 			if ((*read)->mod_smb == 'o' && !((*read)->mod[0] == '0' && !(*read)->mod[1]))
@@ -252,6 +250,9 @@ int    ft_app_fl(t_rd **read)
 
 int    ft_solver(t_rd **read, t_out *output)
 {
+	(*read)->sign = 0; /* Positive Number */
+	if ((*read)->mod[0] == '-')
+		(*read)->sign = 1; /* Negative Number */
 	if (((*read)->mod_smb == 'd' || (*read)->mod_smb == 'i')
 	    && ((*read)->prs))
 	{

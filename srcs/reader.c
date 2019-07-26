@@ -26,6 +26,8 @@ static void	ft_k(t_rd **read, const char *format, va_list **ap, t_out *out)
 		chck_c(read, ap);
 	else if (format[(*read)->smb_cnt] == 'u')
 	    chck_u(read, ap);
+	else if (format[(*read)->smb_cnt] == '%')
+		ft_put_percent(read);
 	else
 		chck_nthng(format, out, read);
 }
