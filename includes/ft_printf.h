@@ -64,24 +64,24 @@ typedef struct			s_rd
 	wchar_t 			*mod2;
 	char				*mod;       /* String */
 	char				mod_smb;    /* Symbol of Format */
-//	int                 sign;       /* Sign */
+	int                 sign;       /* Sign */
 	unsigned short int	flag;       /* Flags */
 	unsigned short int	size;       /* Size of Output */
 	size_t      		smb_cnt;    /* Counter for Checking */
 	size_t              kostil;     /* Kostil for prs */
-	size_t  			width;      /* Field Width */
-	size_t				prs;        /* Precision */
+	long      			width;      /* Field Width */
+	long				prs;        /* Precision */
 	size_t      		strlen;     /* Size Of String */
 	struct s_rd			*next;
 	struct s_rd			*prev;
-
+	int 				zero;
 }						t_rd;
 
 typedef struct			s_out
 {
 	char				*buf;
 	int					cnt;         /* Array Counter */
-	unsigned int		output_cnt;  /* Symbols Sum */
+//	unsigned int		output_cnt;  /* Symbols Sum */
 
 }						t_out;
 
@@ -113,7 +113,7 @@ void		ft_chck_size(t_rd **read, const char *format/*, va_list **ap*/);
 void		ft_chck_precision(t_rd **read, const char *format, va_list **ap);
 void		ft_chck_wdth(t_rd **read, const char *format, va_list **ap);
 void		ft_rd(t_rd **rd, va_list *ap, const char *ft, t_out **out);
-int         ft_put_percent(t_rd **read);
+void        ft_put_percent(t_rd **read/*, const char *format*/);
 void		chck_b(t_rd **read, va_list **ap);
 void		chck_c(t_rd **read, va_list **ap);
 void		chck_di(t_rd **read, va_list **ap, int a);
@@ -126,12 +126,14 @@ void		chck_sr(t_rd **read, va_list **ap, int a);
 void		chck_x(t_rd **read, va_list **ap);
 void		chck_xu(t_rd **read, va_list **ap);
 void        chck_u(t_rd **read, va_list **ap);
-int         chck_nthng(const char *format, t_out *output, t_rd **rd);
+void        chck_nthng(const char *format, t_out *output, t_rd **rd);
 
 /*
 **  MAIN
 */
 
+void		ft_putbuf(char *s, int b);
+char		*ft_bufjoin(char *s1, char *s2, int b1, int b2);
 void		ft_free_lists(t_rd **read);
 int			ft_printf(const char *format, ...);
 int			ft_pt_frst(const char *format, t_out *output, t_rd **rd);
@@ -146,6 +148,8 @@ int 		ft_app_d_prs(t_rd **read);
 int			ft_app_width(t_rd **read);
 int			ft_app_size(t_rd **read, t_out **output);
 int 		ft_put_out(t_rd **read, t_out **output);
+int		 	ft_add_pl(t_rd **read);
+int         ft_add_sharp(t_rd **read);
 
 /*
 **  OUTPUT
@@ -159,7 +163,7 @@ void    ft_out_cnt(t_out *output);
 
 char            *ft_d(int64_t n);
 char            *ft_u(u_int64_t n);
-char            *ft_c(wchar_t c, int a);
+char            *ft_c(wchar_t c, int a, t_rd **read);
 char            *ft_e(long double e, int a);
 char            *ft_ox(u_int64_t o, int a, int b);
 char            *ft_p(unsigned long long p);
@@ -194,6 +198,6 @@ char            *ft_rg(char *s, int a, unsigned short int d);
 char            *s_itoa(int64_t n);
 char            *u_itoa(u_int64_t n);
 void            wzrs(char **t);
-char            *ft_ro(char **s, size_t prs, int l);
+char            *ft_ro(char **s, size_t prs, t_rd **read, int l);
 
 #endif

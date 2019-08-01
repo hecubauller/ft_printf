@@ -12,12 +12,21 @@
 
 #include "ft_printf.h"
 
-char *ft_ro(char **s, size_t prs, int l)
+char *ft_ro(char **s, size_t prs, t_rd **read, int l)
 {
 	char *r;
 	int i;
 	int j;
 
+	(*read)->kostil = 4;
+	if ((*s)[0] == '0' && !(*s)[1] && !prs && (!((*read)->flag IS_O) ||
+		(*read)->mod_smb == 'x' || (*read)->mod_smb == 'X'))
+	{
+		if (!(r = (char *)malloc(sizeof(char) * 1)))
+			return (NULL);
+		r[0] = '\0';
+		return (r);
+	}
 	if (!(r = (char *)malloc(sizeof(char) * (prs + 1))))
 		return (NULL);
 	r[prs] = '\0';
@@ -35,13 +44,14 @@ char    *ft_ox(u_int64_t o, int a, int b)
 {
 	char *s;
 
-    if (!o)
-    {
-        if (!(s = (char *)malloc(sizeof(char))))
-            return (NULL);
-        s[0] = '\0';
-        return (s);
-    }
+//    if (!o)
+//    {
+//        if (!(s = (char *)malloc(sizeof(char))))
+//            return (NULL);
+//        s[0] = '\0';
+//        return (s);
+//    }
+	s = NULL;
 	if (a == 8)
 	{
 	    if (!(s = u_itoa_base(o, 8, 1)))

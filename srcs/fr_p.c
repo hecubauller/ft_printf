@@ -19,9 +19,9 @@ char    *fr_p(int i, char *man)
     int     e;
 
     fr = (char *)malloc(sizeof(char) * 5001);
-    memset(fr, '0', 5000);
+    ft_memset(fr, '0', 5000);
     fr[5000] = '\0';
-    len = strlen(man + i + 1);
+    len = ft_strlen(man + i + 1);
     e = 1;
     while (man[++i])
     {

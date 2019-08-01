@@ -1,16 +1,12 @@
 cmake_minimum_required(VERSION 3.14)
-project(printf C)
+project(ft_printf C)
 
 set(CMAKE_C_STANDARD 11)
 
-include_directories(.)
 include_directories(includes)
-include_directories(libft)
 include_directories(libft/includes)
-include_directories(libft/sources)
-include_directories(srcs)
 
-add_executable(printf
+add_executable(ft_printf
         includes/ft_printf.h
         libft/includes/get_next_line.h
         libft/includes/libft.h
@@ -89,6 +85,7 @@ add_executable(printf
         srcs/chck_o.c
         srcs/chck_p.c
         srcs/chck_sr.c
+        srcs/chck_u.c
         srcs/chck_x.c
         srcs/chck_xu.c
         srcs/e_zrs.c
@@ -108,6 +105,8 @@ add_executable(printf
         srcs/ft_put_percent.c
         srcs/ft_rg.c
         srcs/ft_round.c
+        srcs/ft_s.c
+        srcs/ft_u.c
         srcs/int_p.c
         srcs/mantis.c
         srcs/mexp.c

@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-int   chck_nthng(const char *format, t_out *output, t_rd **read)
+void    chck_nthng(const char *format, t_out *output, t_rd **read)
 {
 	char	*res;
 	char	*tmp2;
@@ -22,6 +22,10 @@ int   chck_nthng(const char *format, t_out *output, t_rd **read)
 
 	i = 0;
 	b = -1;
+	while (format[(*read)->smb_cnt] == 'l' || format[(*read)->smb_cnt] == 'h' ||
+		format[(*read)->smb_cnt] == 'j' || format[(*read)->smb_cnt] == 'z' ||
+			format[(*read)->smb_cnt] == 'L' || format[(*read)->smb_cnt] == 't')
+		++(*read)->smb_cnt;
 	tmp = (*read)->smb_cnt;
     if ((format[(*read)->smb_cnt] >= 'A' && format[(*read)->smb_cnt] <= 'Z') ||
         (format[(*read)->smb_cnt] >= 'a' && format[(*read)->smb_cnt] <= 'z'))
@@ -31,24 +35,27 @@ int   chck_nthng(const char *format, t_out *output, t_rd **read)
             i++;
         }
         if (!(res = (char *) malloc(sizeof(char) * (i + 1))))
-            return (0);
+            return ;
         res[i] = '\0';
         tmp--;
         while (++b < i)
             res[b] = format[++tmp];
         tmp2 = (*output).buf;
-        (*output).buf = ft_strjoin((*output).buf, res);
-        free((void *) res);
+        (*output).buf = ft_bufjoin((*output).buf, res, (*output).cnt, i);
+        free((void *)res);
         tmp2 ? free((void *) tmp2) : 0;
-        //(*read)->smb_cnt--;
-        format[(*read)->smb_cnt] == '\0' ? (*read)->smb_cnt-- : 0;
-        return (SUCCESS);
+        --(*read)->smb_cnt;
+		(*output).cnt += i;
     }
 }
 
-int    ft_put_percent(t_rd **read)
+void    ft_put_percent(t_rd **read/*, const char *format*/)
 {
-	(*read)->mod = (char *)malloc(sizeof(char) * 2);
-	(*read)->mod[0] = '%';
-	(*read)->mod[1] = '\0';
+//	if (!format[(*read)->smb_cnt + 1] || format[(*read)->smb_cnt + 1] == '%')
+//	{
+		(*read)->mod = (char *) malloc(sizeof(char) * 2);
+		(*read)->mod[0] = '%';
+		(*read)->mod[1] = '\0';
+		(*read)->mod_smb = '%';
+//	}
 }

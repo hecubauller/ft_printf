@@ -14,9 +14,9 @@
 
 int		main()
 {
-    int a = printf("%0+5d", +42);
+    int a = printf("\\n");
     printf("\n%d\n", a);
-    int b = ft_printf("%0+5d", +42);
-    printf("\n%d\n", b);
+	int b = ft_printf("\\n");
+	printf("\n%d\n", b);
 	return (0);
 }
