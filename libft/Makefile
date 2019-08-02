@@ -6,7 +6,7 @@
 #    By: sleonia <sleonia@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/04/06 18:14:41 by doberyn           #+#    #+#              #
-#    Updated: 2019/07/20 22:13:32 by huller           ###   ########.fr        #
+#    Updated: 2019/08/02 16:16:10 by huller           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -52,10 +52,10 @@ all: $(NAME)
 $(OBJ_PATH)%.o: $(SRC_PATH)%.c
 	@mkdir -p $(OBJ_PATH)
 	@gcc -Wall -Werror -Wextra $(INC) -o $@ -c $<
-	@echo -n =
+	@echo -n 🌧 
 
 $(NAME): $(OBJ)
-	@echo -n 8
+	@echo -n 🌈
 	@echo "\n$(YELLOW)LIBFT READY!"
 	@ar -rc $(NAME) $?
 	@ranlib $(NAME)

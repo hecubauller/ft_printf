@@ -109,11 +109,12 @@ typedef union			u_flts
 void        ft_reader(t_rd **read, va_list *ap, const char *format, t_out *out);
 void		ft_chck_flags(t_rd **read, const char *format);
 void		ft_chck_mod(t_rd **read, const char *format, va_list **ap, t_out *out);
-void		ft_chck_size(t_rd **read, const char *format/*, va_list **ap*/);
+void		ft_chck_size(t_rd **read, const char *format);
 void		ft_chck_precision(t_rd **read, const char *format, va_list **ap);
 void		ft_chck_wdth(t_rd **read, const char *format, va_list **ap);
 void		ft_rd(t_rd **rd, va_list *ap, const char *ft, t_out **out);
-void        ft_put_percent(t_rd **read/*, const char *format*/);
+void        ft_put_percent(t_rd **read);
+void        ft_k(t_rd **read, const char *format, va_list **ap, t_out *out);
 void		chck_b(t_rd **read, va_list **ap);
 void		chck_c(t_rd **read, va_list **ap);
 void		chck_di(t_rd **read, va_list **ap, int a);

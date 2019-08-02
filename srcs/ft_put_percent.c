@@ -49,13 +49,10 @@ void    chck_nthng(const char *format, t_out *output, t_rd **read)
     }
 }
 
-void    ft_put_percent(t_rd **read/*, const char *format*/)
+void    ft_put_percent(t_rd **read)
 {
-//	if (!format[(*read)->smb_cnt + 1] || format[(*read)->smb_cnt + 1] == '%')
-//	{
 		(*read)->mod = (char *) malloc(sizeof(char) * 2);
 		(*read)->mod[0] = '%';
 		(*read)->mod[1] = '\0';
 		(*read)->mod_smb = '%';
-//	}
 }

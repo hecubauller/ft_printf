@@ -12,18 +12,6 @@
 
 #include "ft_printf.h"
 
-//void    ft_out_cnt(t_out *output)
-//{
-//	int i;
-//	int b;
-//
-//	b = 0;
-//	i = -1;
-//	while ((output)->buf[++i])
-//		++b;
-//	output->output_cnt = b;
-//}
-
 int     ft_pt_frst(const char *format, t_out *output, t_rd **rd)
 {
 	char	*res;
@@ -53,7 +41,6 @@ int     ft_pt_frst(const char *format, t_out *output, t_rd **rd)
 	free((void *)res);
 	(*output).cnt += i;
 	tmp2 ? free((void *)tmp2) : 0;
-//	format[(*rd)->smb_cnt] == '\0' ? (*rd)->smb_cnt-- : 0;
 	return (SUCCESS);
 }
 
@@ -64,7 +51,7 @@ void    ft_reader(t_rd **read, va_list *ap, const char *format, t_out *out)
 	ft_chck_flags(read, format);
 	ft_chck_wdth(read, format, &ap);
 	ft_chck_precision(read, format, &ap);
-	ft_chck_size(read, format/*, &ap*/);
+	ft_chck_size(read, format);
 	ft_chck_mod(read, format, &ap, out);
 	if (((*read)->mod_smb == 'd' || (*read)->mod_smb == 'i' ||
 	     (*read)->mod_smb == 's' || (*read)->mod_smb == 'u' ||
@@ -128,7 +115,6 @@ int ft_printf(const char *format, ...)
 
 	if (!(*format))
 		return (0);
-//	p.output.output_cnt = 0;
 	p.output.cnt = 0;
 	va_start (p.ap, format);
 	p.output.buf = NULL;
@@ -152,10 +138,8 @@ int ft_printf(const char *format, ...)
         format[p.read->smb_cnt] ? ++p.read->smb_cnt : 0;
 	}
 	va_end(p.ap);
-//	ft_out_cnt(&p.output);
 	ft_putbuf(p.output.buf, p.output.cnt);
 	p.output.buf ? free(p.output.buf) : 0;
 	ft_free_lists(&p.read);
-//	return (p.output.output_cnt);
 	return (p.output.cnt);
 }

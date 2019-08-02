@@ -14,9 +14,9 @@
 
 int		main()
 {
-    int a = printf("\\n");
+    int a = printf("%i", 323);
     printf("\n%d\n", a);
-	int b = ft_printf("\\n");
+	int b = ft_printf("%i", 323);
 	printf("\n%d\n", b);
 	return (0);
 }

@@ -43,7 +43,7 @@ int 	ft_app_d_prs(t_rd **read)
 			(*read)->mod = res;
 			free((void *)tmp);
 		}
-		else if ((*read)->prs > (long)strlen && (*read)->mod_smb != 'p')
+		else if ((*read)->prs > (long)strlen)
 		{
 
 			if ((*read)->mod_smb == 'p')
@@ -278,7 +278,7 @@ int 	ft_add_pl(t_rd **read)
 	b = 0;
 	if ((*read)->mod)
 	{
-		if ((*read)->flag IS_PL && (*read)->mod[0] != '-' && (*read)->mod_smb != 'u') /* '+' */
+		if ((*read)->flag IS_PL && (!(ft_strchr((*read)->mod, 45))) && (*read)->mod_smb != 'u') /* '+' */
 		{
 			if ((*read)->width && (*read)->sign)
 			{
@@ -292,11 +292,6 @@ int 	ft_add_pl(t_rd **read)
 				else
 				{
 					strlen = ft_strlen((*read)->mod);
-//				if ((*read)->mod[0] == ' ')
-//				{
-//					strlen--;
-//					i++;
-//				}
 					if (!(res = (char *) malloc(sizeof(char) * (strlen + 1))))
 						return (0);
 					res[strlen] = '\0';
@@ -315,11 +310,6 @@ int 	ft_add_pl(t_rd **read)
 			else
 			{
 				strlen = ft_strlen((*read)->mod);
-//				if ((*read)->mod[0] == ' ')
-//				{
-//					strlen--;
-//					i++;
-//				}
 				if (!(res = (char *) malloc(sizeof(char) * (strlen + 2))))
 					return (0);
 				res[strlen + 1] = '\0';
