@@ -14,8 +14,6 @@
 
 void	chck_b(t_rd **read, va_list **ap)
 {
-	size_t l;
-
 	(*read)->mod_smb = 'b';
 	if ((*read)->size == 0)
 		(*read)->mod = ft_ox(va_arg(**ap, unsigned int), 2, 1);
@@ -34,7 +32,7 @@ void	chck_b(t_rd **read, va_list **ap)
 	else if ((*read)->size == 128)
 		(*read)->mod = ft_ox(va_arg(**ap, u_int64_t), 2, 1);
 	if ((((*read)->kostil == 1 || (*read)->prs != 6) &&
-			     (long)(l = ft_strlen((*read)->mod)) < (*read)->prs) ||
+			     (long)(ft_strlen((*read)->mod)) < (*read)->prs) ||
 			     ((*read)->mod[0] == '0' && !(*read)->mod[1] && !(*read)->prs))
-		(*read)->mod = ft_ro(&(*read)->mod, (*read)->prs, read, l);
+		(*read)->mod = ft_ro(&(*read)->mod, (*read)->prs, read, 0);
 }

@@ -12,13 +12,17 @@
 
 #include "ft_printf.h"
 
-char *ft_ro(char **s, size_t prs, t_rd **read, int l)
+char *ft_ro(char **s, size_t prs, t_rd **read, int g)
 {
 	char *r;
 	int i;
 	int j;
+	int l;
 
-	(*read)->kostil = 4;
+	l = ft_strlen(*s);
+	(*read)->kostil = g ? 5 : 4;
+	if (*s[0] == '0' && !(*s)[1])
+		(*read)->kostil = 4;
 	if ((*s)[0] == '0' && !(*s)[1] && !prs && (!((*read)->flag IS_O) ||
 		(*read)->mod_smb == 'x' || (*read)->mod_smb == 'X'))
 	{
