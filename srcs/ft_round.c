@@ -19,7 +19,12 @@ char    *ft_round(char *s, size_t a, unsigned short f)
     char    *t;
     char    *c;
 
-    c = NULL;
+    i = -1;
+    while (s[++i] && s[i] != '.')
+    	;
+    if (!s[i])
+		return (s);
+	c = NULL;
     k = ft_strlen(s);
     i = t_str(s, &t);
     if (k != i)
@@ -27,7 +32,7 @@ char    *ft_round(char *s, size_t a, unsigned short f)
     if (t[i - 1] != '.')
     {
         k = i;
-        while (t[--i] != '.')
+        while (--i >= 0 && t[i] != '.')
             ;
         if (k - i - 1 < (int)a)
             zrs(&t, a, i);

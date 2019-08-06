@@ -30,7 +30,7 @@ void	ft_cycle(t_rd **rd, const char *format)
 	while (format[(*rd)->smb_cnt] == 'l' || format[(*rd)->smb_cnt] == 'h' ||
 		   format[(*rd)->smb_cnt] == 'j' || format[(*rd)->smb_cnt] == 'z' ||
 		   format[(*rd)->smb_cnt] == 'L' || format[(*rd)->smb_cnt] == 't')
-		++(*rd)->smb_cnt;
+		++((*rd)->smb_cnt);
 }
 
 int		ft_k(t_rd **read, const char *format, va_list **ap, t_out *out)
