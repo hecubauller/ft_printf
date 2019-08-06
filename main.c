@@ -11,12 +11,13 @@
 /* ************************************************************************** */
 
 #include "includes/ft_printf.h"
+#include <stdio.h>
 
 int		main()
 {
-    int a = printf("%i", 323);
+    int a = printf("%%");
     printf("\n%d\n", a);
-	int b = ft_printf("%i", 323);
-	printf("\n%d\n", b);
+	int b = ft_printf("%%");
+	printf("\n%d", b);
 	return (0);
 }
