@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "ft_printf.h"
 
 void	chck_di(t_rd **read, va_list **ap, int a)
@@ -33,4 +32,3 @@ void	chck_di(t_rd **read, va_list **ap, int a)
 	else if ((*read)->size == 128)
 		(*read)->mod = s_itoa(va_arg(**ap, u_int64_t));
 }
-

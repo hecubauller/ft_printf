@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   c_str.c                                            :+:      :+:    :+:   */
+/*   ft_put_out.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: shunt <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/23 09:30:46 by shunt             #+#    #+#             */
-/*   Updated: 2019/06/23 09:30:48 by shunt            ###   ########.fr       */
+/*   Created: 2019/08/07 01:31:37 by shunt             #+#    #+#             */
+/*   Updated: 2019/08/07 01:31:39 by shunt            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void	c_str(char *s, char **c, int i, int k)
+int		ft_put_out(t_rd **read, t_out **output)
 {
-	if (!(*c = (char *)malloc(sizeof(char) * (k - i + 1))))
-		return ;
-	(*c)[k - i] = '\0';
-	k = i - 1;
-	i = -1;
-	while (s[++k])
-		(*c)[++i] = s[k];
+	unsigned long	i;
+	int				b;
+	unsigned long	strlen;
+	char			*tmp;
+
+	i = 0;
+	b = -1;
+	if ((*read)->mod)
+	{
+		strlen = ft_strlen((*read)->mod) + (*read)->zero;
+		tmp = (*output)->buf;
+		(*output)->buf = ft_bufjoin((*output)->buf, (*read)->mod,
+									(*output)->cnt, strlen);
+		(*output)->cnt += strlen;
+		free((void *)tmp);
+	}
+	return (SUCCESS);
 }
